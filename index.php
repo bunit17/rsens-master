@@ -25,6 +25,9 @@ body {background-color:black;}
     text-decoration: none;
     padding-left: 20px;
 }
+.text_row{
+	height: 30px;
+}
 </style>
 </head>
 <body>
@@ -39,15 +42,15 @@ body {background-color:black;}
     <td id="tub_adverage" class="table_cell small_gage" width="25%"></td>
     <td id="tub_peak" class="table_cell small_gage" width="25%"></td>
   </tr>
-   <tr>
+  <tr class="text_row">
     <td id="" class="table_cell" colspan="4">
 	<a href="history.php" class="today link">View todays data</a>
 	<a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a>
 	<a href="history.php" class="historic link">View historic data</a>
 	</td>
   </tr>
-  <tr>
-	<td id="" class="table_cell error_text" colspan="4">
+  <tr class="text_row">
+	<td id="" class="table_cell error_text " colspan="4">
     If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
 	</td>
   </tr>
