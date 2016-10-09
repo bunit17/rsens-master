@@ -1,5 +1,5 @@
 <?php
-if(!$_GET['date']){
+if(empty($_GET['date'])){
 $date = date('d-m-Y');
 }else{
 $date = $_GET['date'];
@@ -73,8 +73,8 @@ body {
   <?php
 require("database_conc.inc");
 $i=0;
-$stmt = $link->prepare("SELECT id, CONVERT_TZ(timestamp,  'America/Los_Angeles',  'Europe/London' ) AS timestamp, plug_adverage, tub_adverage, (plug_adverage+plug_sd+plug_sd) as plug_peak, (tub_adverage+tub_sd+tub_sd) as tub_peak FROM adverage_data WHERE timestamp > CONVERT_TZ( ?,  'Europe/London', 'America/Los_Angeles' )
- and timestamp < CONVERT_TZ( ?,  'Europe/London', 'America/Los_Angeles')");
+$stmt = $link->prepare("SELECT id, CONVERT_TZ(timestamp,  'UTC',  'Europe/London' ) AS timestamp, plug_adverage, tub_adverage, (plug_adverage+plug_sd+plug_sd) as plug_peak, (tub_adverage+tub_sd+tub_sd) as tub_peak FROM adverage_data WHERE timestamp > CONVERT_TZ( ?,  'Europe/London', 'UTC' )
+ and timestamp < CONVERT_TZ( ?,  'Europe/London', 'UTC')");
 $stmt->bind_param('ss', $start_date, $end_date);
 $stmt->execute();
 $stmt->bind_result($id, $timestamp, $plug_adverage, $tub_adverage, $plug_peak, $tub_peak);

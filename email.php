@@ -1,5 +1,5 @@
 <?php
-if(!$_GET['date']){
+if(empty($_GET['date'])){
 $date = "2015-10-21";
 }else{
 $date = $_GET['date'];
@@ -58,9 +58,9 @@ body {
 
   <?php
 require("database_conc.inc");
-$stmt = $link->prepare("SELECT id, CONVERT_TZ(timestamp,  'America/Los_Angeles',  'Europe/London' ) AS timestamp, plug_adverage, 
-tub_adverage, plug_peak, tub_peak FROM adverage_data WHERE timestamp > CONVERT_TZ( ?,  'Europe/London', 'America/Los_Angeles' )
- and timestamp < CONVERT_TZ( ?,  'Europe/London', 'America/Los_Angeles')");
+$stmt = $link->prepare("SELECT id, CONVERT_TZ(timestamp,  'UTC',  'Europe/London' ) AS timestamp, plug_adverage, 
+tub_adverage, plug_peak, tub_peak FROM adverage_data WHERE timestamp > CONVERT_TZ( ?,  'Europe/London', 'UTC' )
+ and timestamp < CONVERT_TZ( ?,  'Europe/London', 'UTC')");
 $stmt->bind_param('ss', $start_date, $end_date);
 $stmt->execute();
 $result = $stmt->get_result();
