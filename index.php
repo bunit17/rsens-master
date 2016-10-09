@@ -146,6 +146,17 @@ body {background-color:black;}
 			//json_length = data.messages.length
 			//new_new = 0;
 		//});
+		  $( document ).ready(function() {
+                $.getJSON('monitor_adverage.php', function(data) {
+                        if(data){
+                                plug_adverage.refresh(data.plug_adverage);
+                                plug_peak.refresh(data.plug_peak);
+                                tub_adverage.refresh(data.tub_adverage);
+                                tub_peak.refresh(data.tub_peak);
+                        }
+                  });
+        });
+
 
   });
   </script>
