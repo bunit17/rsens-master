@@ -7,15 +7,24 @@
 .table  {border-spacing:10; width:100%; height:100%;}
 .table_cell {background-color:#007FDF;}
 body {background-color:black;}
-.large_gage {width: 660px; height: 350px;}
-.small_gage {width: 323px; height: 300px;}
+.large_gage {width: 660px; height: 400px;}
+.small_gage {width: 323px; height: 350px;}
 .link {
 	font-size: 30px;
     font-weight: bold;
     color: white;
     font-family: Tahoma;
     text-decoration: none;
-    margin-left: 20px;}
+    margin-left: 20px;
+}
+.error_text {
+	font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: Tahoma;
+    text-decoration: none;
+    margin-left: 20px;
+}
 </style>
 </head>
 <body>
@@ -38,7 +47,7 @@ body {background-color:black;}
 	</td>
   </tr>
   <tr>
-	<td id="" class="table_cell" colspan="4">
+	<td id="" class="table_cell error_text" colspan="4">
     If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
 	</td>
   </tr>
