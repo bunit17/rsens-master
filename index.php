@@ -18,12 +18,12 @@ body {background-color:black;}
     margin-left: 20px;
 }
 .error_text {
-	font-size: 30px;
+	font-size: 20px;
     font-weight: bold;
     color: white;
     font-family: Tahoma;
     text-decoration: none;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 </style>
 </head>
