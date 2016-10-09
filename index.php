@@ -37,6 +37,11 @@ body {background-color:black;}
 	<a href="history.php" class="historic link">View historic data</a>
 	</td>
   </tr>
+  <tr>
+	<td id="" class="table_cell" colspan="4">
+    If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
+	</td>
+  </tr>
 </table>
 
  <script>
