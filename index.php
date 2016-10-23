@@ -168,10 +168,10 @@ body {background-color:black;}
 			  }
 			  
 				if(json.plug){
-				plug.refresh(data.plug);
+				plug.refresh(json.plug);
 				}
 				if(json.tub){
-				tub.refresh(data.tub);
+				tub.refresh(json.tub);
 				}
 			  
 			}, "text");
