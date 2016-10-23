@@ -185,7 +185,7 @@ body {background-color:black;}
 					}
 					
 					if(json.tub_peak && json.tub_peak>0){
-					tub_peak.refresh(data.tub_peak);
+					tub_peak.refresh(json.tub_peak);
 					}else{
 					error1 = true;
 					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
