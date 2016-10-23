@@ -164,12 +164,13 @@ body {background-color:black;}
 					//alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
+					json = jQuery.parseJSON(data);
 					$("#error").hide();
-					if(data.plug){
-					plug.refresh(data.plug);
+					if(json.plug){
+					plug.refresh(json.plug);
 					}
-					if(data.tub){
-					tub.refresh(data.tub);
+					if(json.tub){
+					tub.refresh(json.tub);
 					}
 				}
 			});
