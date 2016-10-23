@@ -154,7 +154,7 @@ body {background-color:black;}
 					//alert('Monitor average status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
-						error1 = flase;
+						error1 = false;
 					
 					try {
 						json = jQuery.parseJSON(data);
@@ -227,7 +227,7 @@ body {background-color:black;}
 					//alert('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
-					error2 = flase;
+					error2 = false;
 					
 					try {
 						json = jQuery.parseJSON(data);
@@ -302,7 +302,7 @@ body {background-color:black;}
 					//alert('Monitor average status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
-						error1 = flase;
+						error1 = false;
 					
 					try {
 						json = jQuery.parseJSON(data);
