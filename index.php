@@ -51,7 +51,7 @@ body {background-color:black;}
 	</td>
   </tr>
   <tr class="text_row">
-	<td id="" class="table_cell error_text " colspan="4">
+	<td id="error_row" class="table_cell error_text " colspan="4">
     Please take a picture of the screen and email rsens@nb221.com. <span id="error"></span>
 	</td>
   </tr>
@@ -160,12 +160,12 @@ body {background-color:black;}
 				type: 'post',
 				error: function(XMLHttpRequest, textStatus, errorThrown){
 					$("#error").text('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-					$("#error").show();
+					$("#error_row").show();
 					//alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
 					json = jQuery.parseJSON(data);
-					$("#error").hide();
+					$("#error_row").hide();
 					if(json.plug){
 					plug.refresh(json.plug);
 					}
