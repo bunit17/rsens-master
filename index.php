@@ -166,6 +166,7 @@ body {background-color:black;}
 				success: function(data){
 					json = jQuery.parseJSON(data);
 					$("#error_row").hide();
+					
 					if(json.plug && json.plug>0){
 					plug.refresh(json.plug);
 					}else{
@@ -174,7 +175,7 @@ body {background-color:black;}
 					}
 					
 					if(json.tub && json.tub>0){
-					plug.refresh(json.tub);
+					tub.refresh(json.tub);
 					}else{
 					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
 					$("#error_row").show();
