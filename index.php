@@ -156,16 +156,16 @@ body {background-color:black;}
 				success: function(data){
 						error1 = false;
 					
-					try {
-						json = jQuery.parseJSON(data);
-					  } catch (e) {
-							error1 = true;
-							$("#error").text('Monitor average status: json error, data: ' + data);
+						try {
+							json = JSON.parse(data);
+						}
+						catch (e) {
+       						error1 = true;
+							$("#error").text('Monitor average status: json error, data: ' + e);
 							$("#error_row").show();
+						}
 					
-					  }
-					
-				
+					if(json){
 					
 					if(!error2){
 					$("#error_row").hide();
@@ -202,6 +202,7 @@ body {background-color:black;}
 					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
 					$("#error_row").show();
 					}
+					}
 				}
 			});
 		  
@@ -237,6 +238,7 @@ body {background-color:black;}
 							$("#error_row").show();
 					
 					  }
+					if(json){  
 					
 					if(!error1){
 					$("#error_row").hide();
@@ -257,6 +259,7 @@ body {background-color:black;}
 					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
 					$("#error_row").show();
 					}
+				}
 				}
 			});
 			
@@ -304,14 +307,16 @@ body {background-color:black;}
 				success: function(data){
 						error1 = false;
 					
-					try {
-						json = jQuery.parseJSON(data);
-					  } catch (e) {
-							error1 = true;
-							$("#error").text('Monitor average status: json error, data: ' + data);
+						try {
+							json = JSON.parse(data);
+						}
+						catch (e) {
+       						error1 = true;
+							$("#error").text('Monitor average status: json error, data: ' + e);
 							$("#error_row").show();
+						}
 					
-					  }
+					if(json){
 					
 					if(!error2){
 					$("#error_row").hide();
@@ -347,6 +352,7 @@ body {background-color:black;}
 					error1 = true;
 					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
 					$("#error_row").show();
+					}
 					}
 				}
 			});
