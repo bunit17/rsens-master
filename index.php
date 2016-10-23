@@ -159,18 +159,25 @@ body {background-color:black;}
 				data: {value: 1},
 				type: 'post',
 				error: function(XMLHttpRequest, textStatus, errorThrown){
-					$("#error").text('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+					$("#error").text('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 					$("#error_row").show();
-					//alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+					//alert('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
 					json = jQuery.parseJSON(data);
 					$("#error_row").hide();
-					if(json.plug){
+					if(json.plug && json.plug>0){
 					plug.refresh(json.plug);
+					}else{
+					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.plug);
+					$("#error_row").show();
 					}
-					if(json.tub){
-					tub.refresh(json.tub);
+					
+					if(json.tub && json.tub>0){
+					plug.refresh(json.tub);
+					}else{
+					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
+					$("#error_row").show();
 					}
 				}
 			});
