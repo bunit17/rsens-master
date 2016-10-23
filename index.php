@@ -154,9 +154,18 @@ body {background-color:black;}
 					//alert('Monitor average status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
-					json = jQuery.parseJSON(data);
+						error1 = flase;
 					
-					error1 = flase;
+					try {
+						json = jQuery.parseJSON(data);
+					  } catch (e) {
+							error1 = true;
+							$("#error").text('Monitor average status: json error, data: ' + data);
+							$("#error_row").show();
+					
+					  }
+					
+				
 					
 					if(!error2){
 					$("#error_row").hide();
@@ -218,9 +227,16 @@ body {background-color:black;}
 					//alert('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
-					json = jQuery.parseJSON(data);
+					error2 = flase;
 					
-					error2 = false;
+					try {
+						json = jQuery.parseJSON(data);
+					  } catch (e) {
+							error1 = true;
+							$("#error").text('Monitor status: json error, data: ' + data);
+							$("#error_row").show();
+					
+					  }
 					
 					if(!error1){
 					$("#error_row").hide();
@@ -286,9 +302,16 @@ body {background-color:black;}
 					//alert('Monitor average status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
-					json = jQuery.parseJSON(data);
+						error1 = flase;
 					
-					error1 = flase;
+					try {
+						json = jQuery.parseJSON(data);
+					  } catch (e) {
+							error1 = true;
+							$("#error").text('Monitor average status: json error, data: ' + data);
+							$("#error_row").show();
+					
+					  }
 					
 					if(!error2){
 					$("#error_row").hide();
