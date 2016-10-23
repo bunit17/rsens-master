@@ -153,8 +153,24 @@ body {background-color:black;}
 			}
 			}); */
 			
+			$.ajax({
+				url: "monitor.php", 
+				data: {value: 1},
+				type: 'post',
+				error: function(XMLHttpRequest, textStatus, errorThrown){
+					alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+				},
+				success: function(data){
+					if(data.plug){
+					plug.refresh(data.plug);
+					}
+					if(data.tub){
+					tub.refresh(data.tub);
+					}
+				}
+			});
 			
-			$.get('monitor.php', function (data) {
+			/* $.get('monitor.php', function (data) {
 			  if( !data || data === ""){
 				alert("error");
 				return;
@@ -174,7 +190,7 @@ body {background-color:black;}
 				tub.refresh(json.tub);
 				}
 			  
-			}, "text");
+			}, "text"); */
 			
          }, 1000);
 	
