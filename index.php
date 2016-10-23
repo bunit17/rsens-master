@@ -144,14 +144,38 @@ body {background-color:black;}
         }, 30000);
 	
 	setInterval(function() {
-			$.getJSON('monitor.php', function(data) {
+			/* $.getJSON('monitor.php', function(data) {
 			if(data.plug){
 			plug.refresh(data.plug);
 			}
 			if(data.tub){
 			tub.refresh(data.tub);
 			}
-			});
+			}); */
+			
+			
+			$.get('monitor.php', function (data) {
+			  if( !data || data === ""){
+				alert("error");
+				return;
+			  }
+			  var json;
+			  try {
+				json = jQuery.parseJSON(data);
+			  } catch (e) {
+				alert("error 2");
+				return;
+			  }
+			  
+				if(json.plug){
+				plug.refresh(data.plug);
+				}
+				if(json.tub){
+				tub.refresh(data.tub);
+				}
+			  
+			}, "text");
+			
          }, 1000);
 	
 	//getDataMonitor(function(){
