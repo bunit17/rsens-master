@@ -24,6 +24,7 @@ body {background-color:black;}
     font-family: Tahoma;
     text-decoration: none;
     padding-left: 20px;
+	background-color: red;
 }
 .text_row{
 	height: 30px;
@@ -51,7 +52,7 @@ body {background-color:black;}
   </tr>
   <tr class="text_row">
 	<td id="" class="table_cell error_text " colspan="4">
-    If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
+    Please take a picture of the screen and email rsens@nb221.com. <span id="error"></span>
 	</td>
   </tr>
 </table>
@@ -158,9 +159,12 @@ body {background-color:black;}
 				data: {value: 1},
 				type: 'post',
 				error: function(XMLHttpRequest, textStatus, errorThrown){
-					alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+					$("#error").text('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+					$("#error").show();
+					//alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
+					$("#error").hide();
 					if(data.plug){
 					plug.refresh(data.plug);
 					}
