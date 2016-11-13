@@ -50,33 +50,32 @@ body {background-color:black;}
 }
 .guage{
 	background-color:#007FDF;
-	border: 5px;
-	padding: 5px;
 }
 </style>
 </head>
 <body>
-<div id="wrapper" width="100%">
-	<div class="Main_row">
-		<div id="plug" width="50%"></div>
-		<div id="tub" width="50%"></div>
+<div id="wrapper" class="container-fluid">
+	<div class="row">
+		<div id="plug" class="col-md-6 guage"></div>
+		<div id="tub" class="col-md-6 guage"></div>
 	</div>
-	<div class="Sub_row">
-		<div id="plug_adverage" class="guage" width="25%"></div>
-		<div id="plug_peak" class="guage" width="25%"></div>
-		<div id="tub_adverage" class="guage" width="25%"></div>
-		<div id="tub_peak" class="guage" width="25%"></div>
+	<div class="row">
+		<div id="plug_adverage" class="col-md-3 guage"></div>
+		<div id="plug_peak" class="col-md-3 guage"></div>
+		<div id="tub_adverage" class="col-md-3 guage"></div>
+		<div id="tub_peak" class="col-md-3 guage"></div>
 	</div>
-	<div class="Menu_row guage">
+	<div class="row guage">
 		<a href="history.php" class="today link">View todays data</a>
 		<a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a>
 		<a href="history.php" class="historic link">View historic data</a>
 	</div>
-   	<div class="Help_row guage">
+   	<div class="row guage">
 	    	If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
 	</div>
 </div>
- <script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
   document.addEventListener("DOMContentLoaded", function(event) {
 	var plug = new JustGage({
       id: "plug",
