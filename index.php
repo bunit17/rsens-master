@@ -65,15 +65,9 @@ body {background-color:black;}
 	color: white;
 }
 	
-.reduce-gutter(@size: 5px) {
-    .row {
-        .make-row(@size);
-    }
-    .row .col:first-child,
-    .row .col:last-child { 
-        padding-right: @size;
-        padding-left: @size;
-    }
+.col:not(:first-child,:last-child) {
+  padding-right:7px;
+  padding-left:7px;
 }
 
 </style>
