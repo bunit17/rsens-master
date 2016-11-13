@@ -65,7 +65,7 @@ body {background-color:black;}
 	color: white;
 }
 	
-.col:not(:first-child,:last-child) {
+.col{
   padding-right:5px;
   padding-left:5px;
 }
