@@ -63,13 +63,15 @@ body {background-color:black;}
 				<td id="tub_adverage" class="col-md-3 guage"></td>
 				<td id="tub_peak" class="col-md-3 guage"></td>
 			</tr>
-			<tr class="guage">
-				<h4><a href="history.php" class="today link">View todays data</a></h4>
-				<h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4>
-				<h4><a href="history.php" class="historic link">View historic data</a></h4>
+			<tr>
+				<td colspan="4">
+					<h4><a href="history.php" class="today link">View todays data</a></h4>
+					<h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4>
+					<h4><a href="history.php" class="historic link">View historic data</a></h4>
+				</td>
 			</tr>
-			<tr class="guage">
-				<h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4>
+			<tr>
+				<td colspan="4"><h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4></td>
 			</tr>
 		</table>
 	</div>
