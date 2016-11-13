@@ -48,13 +48,13 @@ body {background-color:black;}
 	background-color: #007FDF;
 }
 .main_guage{
-	height: 50%;
+	height: 60%;
 }
 .sub_guage{
 	height: 30%;
 }
 .info{
-	height: 10%;
+	height: 5%;
 }
 </style>
 </head>
