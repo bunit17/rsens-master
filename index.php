@@ -50,24 +50,24 @@ body {background-color:black;}
 </style>
 </head>
 <body>
-<div id="wrapper" class="container-responsive">
+<div id="wrapper" class="container-responsive" height="80%">
 	<div height="80%">
 		<div height="50%" class="row">
 			<div id="plug" class="col-md-6 guage"></div>
 			<div id="tub" class="col-md-6 guage"></div>
 		</div>
-		<div height="30%" class="row">>
+		<div height="30%" class="row">
 			<div id="plug_adverage" class="col-md-3 guage"></div>
 			<div id="plug_peak" class="col-md-3 guage"></div>
 			<div id="tub_adverage" class="col-md-3 guage"></div>
 			<div id="tub_peak" class="col-md-3 guage"></div>
 		</div>
-		<div class="row">>
-			<td colspan="4">
+		<div class="row">
+			<div class="row">
 				<h4><a href="history.php" class="today link">View todays data</a></h4>
 				<h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4>
 				<h4><a href="history.php" class="historic link">View historic data</a></h4>
-			</td>
+			</div>
 		</div>
 		<div class="row">>
 			<td colspan="4"><h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4></td>
