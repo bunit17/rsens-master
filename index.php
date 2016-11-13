@@ -33,8 +33,8 @@ body {background-color:black;}
 <body>
 <table class="table">
   <tr>
-    <th id="plug" class="table_cell large_gage" colspan="2"></th>
-    <th id="tub" class="table_cell large_gage" colspan="2"></th>
+    <td id="plug" class="table_cell large_gage" colspan="2"></td>
+    <td id="tub" class="table_cell large_gage" colspan="2"></td>
   </tr>
   <tr>
     <td id="plug_adverage" class="table_cell small_gage" width="25%"></td>
