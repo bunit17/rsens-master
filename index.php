@@ -51,11 +51,11 @@ body {background-color:black;}
 }
 .main_guage{
 	height: 60%;
-	margin-bottom: 15px;
+	margin-bottom:30px;
 }
 .sub_guage{
 	height: 30%;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 .info{
 	height: 5%;
