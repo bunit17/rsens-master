@@ -54,8 +54,8 @@ body {background-color:black;}
 	<div class="table-responsive">
 		<table class="table">
 			<tr>
-				<td id="plug" class="col-md-6 guage" height="50%"></td>
-				<td id="tub" class="col-md-6 guage" height="50%"></td>
+				<td id="plug" class="col-md-6 guage" height="50%" colspan="2"></td>
+				<td id="tub" class="col-md-6 guage" height="50%" colspan="2"></td>
 			</tr>
 			<tr>
 				<td id="plug_adverage" class="col-md-3 guage"></td>
@@ -64,9 +64,9 @@ body {background-color:black;}
 				<td id="tub_peak" class="col-md-3 guage"></td>
 			</tr>
 			<tr class="guage">
-				<div class="col-md-3"><h4><a href="history.php" class="today link">View todays data</a></h4></div>
-				<div class="col-md-3"><h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4></div>
-				<div class="col-md-3"><h4><a href="history.php" class="historic link">View historic data</a></h4></div>
+				<h4><a href="history.php" class="today link">View todays data</a></h4>
+				<h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4>
+				<h4><a href="history.php" class="historic link">View historic data</a></h4>
 			</tr>
 			<tr class="guage">
 				<h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4>
