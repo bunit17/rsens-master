@@ -5,8 +5,6 @@
 <script src="scripts/justgage-1.1.0.min.js"></script>
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
-.table  {border-spacing:10; width:100%; height:100%;}
-.table_cell {background-color:#007FDF;}
 body {background-color:black;}
 /* .large_gage {width: 660px; height: 400px;} */
 /* .small_gage {width: 323px; height: 325px;} */
@@ -52,26 +50,28 @@ body {background-color:black;}
 </style>
 </head>
 <body>
-<div id="wrapper" class="container" height="50%">
-	<div class="row" height="50%">
-		<div class="row">
-			<div id="plug" class="col-md-6 guage" height="50%"></div>
-			<div id="tub" class="col-md-6 guage" height="50%"></div>
-		</div>
-		<div class="row">
-			<div id="plug_adverage" class="col-md-3 guage"></div>
-			<div id="plug_peak" class="col-md-3 guage"></div>
-			<div id="tub_adverage" class="col-md-3 guage"></div>
-			<div id="tub_peak" class="col-md-3 guage"></div>
-		</div>
-		<div class="row guage">
-			<div class="col-md-3"><h4><a href="history.php" class="today link">View todays data</a></h4></div>
-			<div class="col-md-3"><h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4></div>
-			<div class="col-md-3"><h4><a href="history.php" class="historic link">View historic data</a></h4></div>
-		</div>
-		<div class="row guage">
-			<h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4>
-		</div>
+<div id="wrapper" class="container">
+	<div class="table-responsive">
+		<table class="table">
+			<tr>
+				<td id="plug" class="col-md-6 guage" height="50%"></td>
+				<td id="tub" class="col-md-6 guage" height="50%"></td>
+			</tr>
+			<tr>
+				<td id="plug_adverage" class="col-md-3 guage"></td>
+				<td id="plug_peak" class="col-md-3 guage"></td>
+				<td id="tub_adverage" class="col-md-3 guage"></td>
+				<td id="tub_peak" class="col-md-3 guage"></td>
+			</tr>
+			<tr class="guage">
+				<div class="col-md-3"><h4><a href="history.php" class="today link">View todays data</a></h4></div>
+				<div class="col-md-3"><h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4></div>
+				<div class="col-md-3"><h4><a href="history.php" class="historic link">View historic data</a></h4></div>
+			</tr>
+			<tr class="guage">
+				<h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4>
+			</tr>
+		</table>
 	</div>
 </div>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
