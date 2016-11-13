@@ -27,13 +27,13 @@
 		background-color: #007FDF;	
 	}
 	.main_guage{
-		height: 55%;
+		height: 60%;
 	}
 	.sub_guage{
-		height: 27%;
+		height: 30%;
 	}
 	.info{
-		height: 3%;
+		height: 4%;
 		color: white;
 	}
 
@@ -79,13 +79,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3 col">
+			<div class="col-md-4 col">
 				<div class="info guage"><a href="history.php" class="today link">View todays data</a></div>
 			</div>
-			<div class="col-md-3 col">
+			<div class="col-md-4 col">
 				<div class="info guage"><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></div>
 			</div>
-			<div class="col-md-3 col">
+			<div class="col-md-4 col">
 				<div class="info guage"><a href="history.php" class="historic link">View historic data</a></div>
 			</div>
 		</div>
