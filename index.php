@@ -52,14 +52,19 @@ body {background-color:black;}
 	margin-bottom:30px;
 }
 .sub_guage{
-	height: 20%;
+	height: 30%;
 	margin-bottom: 30px;
 }
-.info{
+.info a{
 	height: 5%;
 	color: white;
 	margin-bottom: 10px;
 }
+
+.info a{
+	color: white;
+}
+	
 </style>
 </head>
 <body>
