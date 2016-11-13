@@ -48,16 +48,17 @@ body {background-color:black;}
 	background-color: #007FDF;	
 }
 .main_guage{
-	height: 60%;
+	height: 55%;
 	margin-bottom:30px;
 }
 .sub_guage{
-	height: 25%;
+	height: 20%;
 	margin-bottom: 30px;
 }
 .info{
 	height: 5%;
 	color: white;
+	margin-bottom: 10px;
 }
 </style>
 </head>
