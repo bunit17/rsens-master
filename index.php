@@ -11,51 +11,63 @@ body {background-color:black;}
 /* .small_gage {width: 323px; height: 325px;} */
 .link {
 	font-size: 30px;
-    font-weight: bold;
-    color: white;
-    font-family: Tahoma;
-    text-decoration: none;
-    margin-left: 20px;
+    	font-weight: bold;
+    	color: white;
+    	font-family: Tahoma;
+    	text-decoration: none;
+    	margin-left: 20px;
 }
 .error_text {
 	font-size: 20px;
-    font-weight: bold;
-    color: white;
-    font-family: Tahoma;
-    text-decoration: none;
-    padding-left: 20px;
+    	font-weight: bold;
+    	color: white;
+    	font-family: Tahoma;
+    	text-decoration: none;
+    	padding-left: 20px;
 }
 .text_row{
 	height: 30px;
 }
+.Menu_row{
+	height: 30px;
+}
+	
+.Help_row{
+	height: 30px;
+}
+
+.Main_row{
+	height: 50%;
+	width: 100%;
+}
+
+.Sub_row{
+	height: 30%;
+	width: 100%;
+}
 </style>
 </head>
 <body>
-<table class="table">
-  <tr rowspan="2" >
-    <td id="plug" class="table_cell large_gage" colspan="2"></td>
-    <td id="tub" class="table_cell large_gage" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="plug_adverage" class="table_cell small_gage" width="25%"></td>
-    <td id="plug_peak" class="table_cell small_gage" width="25%"></td>
-    <td id="tub_adverage" class="table_cell small_gage" width="25%"></td>
-    <td id="tub_peak" class="table_cell small_gage" width="25%"></td>
-  </tr>
-  <tr class="text_row">
-    <td id="" class="table_cell" colspan="4">
-	<a href="history.php" class="today link">View todays data</a>
-	<a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a>
-	<a href="history.php" class="historic link">View historic data</a>
-	</td>
-  </tr>
-  <tr class="text_row">
-	<td id="" class="table_cell error_text " colspan="4">
-    If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
-	</td>
-  </tr>
-</table>
-
+<div id="wrapper">
+	<div class="Main_row">
+		<div id="plug" width="50%"></div>
+		<div id="tub" width="50%"></div>
+	</div>
+	<div class="Sub_row">
+		<div id="plug_adverage" width="25%"></div>
+		<div id="plug_peak" width="25%"></div>
+		<div id="tub_adverage" width="25%"></div>
+		<div id="tub_peak" width="25%"></div>
+	</div>
+	<div class="Menu_row">
+		<a href="history.php" class="today link">View todays data</a>
+		<a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a>
+		<a href="history.php" class="historic link">View historic data</a>
+	</div>
+   	<div class="Help_row">
+	    	If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
+	</div>
+</div>
  <script>
   document.addEventListener("DOMContentLoaded", function(event) {
 	var plug = new JustGage({
