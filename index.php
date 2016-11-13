@@ -39,32 +39,39 @@ body {background-color:black;}
 .Main_row{
 	height: 50%;
 	width: 100%;
+	padding: 2px;
 }
 
 .Sub_row{
 	height: 30%;
 	width: 100%;
+	padding: 2px;
+}
+.guage{
+	background-color:#007FDF;
+	border: 5px;
+	padding: 5px;
 }
 </style>
 </head>
 <body>
-<div id="wrapper">
+<div id="wrapper" width="100%">
 	<div class="Main_row">
 		<div id="plug" width="50%"></div>
 		<div id="tub" width="50%"></div>
 	</div>
 	<div class="Sub_row">
-		<div id="plug_adverage" width="25%"></div>
-		<div id="plug_peak" width="25%"></div>
-		<div id="tub_adverage" width="25%"></div>
-		<div id="tub_peak" width="25%"></div>
+		<div id="plug_adverage" class="guage" width="25%"></div>
+		<div id="plug_peak" class="guage" width="25%"></div>
+		<div id="tub_adverage" class="guage" width="25%"></div>
+		<div id="tub_peak" class="guage" width="25%"></div>
 	</div>
-	<div class="Menu_row">
+	<div class="Menu_row guage">
 		<a href="history.php" class="today link">View todays data</a>
 		<a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a>
 		<a href="history.php" class="historic link">View historic data</a>
 	</div>
-   	<div class="Help_row">
+   	<div class="Help_row guage">
 	    	If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
 	</div>
 </div>
