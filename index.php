@@ -52,8 +52,8 @@ body {background-color:black;}
 <body>
 <div id="wrapper" class="container-responsive">
 	<div class="table-responsive">
-		<table class="table">
-			<tr>
+		<table class="table" height="100%">
+			<tr height="50%">
 				<td id="plug" class="col-md-6 guage"colspan="2"></td>
 				<td id="tub" class="col-md-6 guage"colspan="2"></td>
 			</tr>
