@@ -7,7 +7,7 @@
 .table  {border-spacing:10; width:100%; height:100%;}
 .table_cell {background-color:#007FDF;}
 body {background-color:black;}
-.large_gage {width: 660px; height: 400px;}
+/* .large_gage {width: 660px; height: 400px;} */
 /* .small_gage {width: 323px; height: 325px;} */
 .link {
 	font-size: 30px;
