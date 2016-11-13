@@ -55,7 +55,7 @@ body {background-color:black;}
 	height: 30%;
 	margin-bottom: 30px;
 }
-.info a{
+.info{
 	height: 5%;
 	color: white;
 	margin-bottom: 10px;
