@@ -45,20 +45,19 @@ body {background-color:black;}
 	padding: 2px;
 }
 .guage{
-	background-color: #007FDF;
-	margin: 1px;
-	
+	background-color: #007FDF;	
 }
 .main_guage{
 	height: 60%;
 	margin-bottom:30px;
 }
 .sub_guage{
-	height: 30%;
+	height: 25%;
 	margin-bottom: 30px;
 }
 .info{
 	height: 5%;
+	color: white;
 }
 </style>
 </head>
@@ -89,18 +88,18 @@ body {background-color:black;}
 		</div>
 		<div class="row">
 			<div class="col-md-3">
-				<div class="info"><a href="history.php" class="today link">View todays data</a></div>
+				<div class="info guage"><a href="history.php" class="today link">View todays data</a></div>
 			</div>
 			<div class="col-md-3">
-				<div class="info"><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></div>
+				<div class="info guage"><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></div>
 			</div>
 			<div class="col-md-3">
-				<div class="info"><a href="history.php" class="historic link">View historic data</a></div>
+				<div class="info guage"><a href="history.php" class="historic link">View historic data</a></div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="info">
+				<div class="info guage">
 					If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
 				</div>
 			</div>
