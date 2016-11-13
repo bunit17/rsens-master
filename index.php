@@ -45,18 +45,19 @@ body {background-color:black;}
 	padding: 2px;
 }
 .guage{
-	background-color:#007FDF;
+	background-color: #007FDF;
+	height: 30%;
 }
 </style>
 </head>
 <body>
-<div id="wrapper" class="container-responsive" height="80%">
+<div id="wrapper" class="container-responsive">
 	<div height="80%">
-		<div height="50%" class="row">
+		<div class="row">
 			<div id="plug" class="col-md-6 guage"></div>
 			<div id="tub" class="col-md-6 guage"></div>
 		</div>
-		<div height="30%" class="row">
+		<div class="row">
 			<div id="plug_adverage" class="col-md-3 guage"></div>
 			<div id="plug_peak" class="col-md-3 guage"></div>
 			<div id="tub_adverage" class="col-md-3 guage"></div>
