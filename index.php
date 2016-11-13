@@ -50,12 +50,12 @@ body {background-color:black;}
 </style>
 </head>
 <body>
-<div id="wrapper" class="container">
+<div id="wrapper" class="container-responsive">
 	<div class="table-responsive">
 		<table class="table">
 			<tr>
-				<td id="plug" class="col-md-6 guage" height="50%" colspan="2"></td>
-				<td id="tub" class="col-md-6 guage" height="50%" colspan="2"></td>
+				<td id="plug" class="col-md-6 guage"colspan="2"></td>
+				<td id="tub" class="col-md-6 guage"colspan="2"></td>
 			</tr>
 			<tr>
 				<td id="plug_adverage" class="col-md-3 guage"></td>
