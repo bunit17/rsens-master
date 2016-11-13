@@ -30,7 +30,7 @@
 		height: 60%;
 	}
 	.sub_guage{
-		height: 30%;
+		height: 28%;
 	}
 	.info{
 		height: 4%;
