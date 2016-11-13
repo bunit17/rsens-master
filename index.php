@@ -52,11 +52,11 @@ body {background-color:black;}
 	margin-bottom:30px;
 }
 .sub_guage{
-	height: 28%;
+	height: 27%;
 	margin-bottom: 30px;
 }
 .info{
-	height: 2%;
+	height: 3%;
 	color: white;
 	margin-bottom: 10px;
 }
