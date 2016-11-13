@@ -46,6 +46,8 @@ body {background-color:black;}
 }
 .guage{
 	background-color: #007FDF;
+	margin: 5px;
+	
 }
 .main_guage{
 	height: 60%;
@@ -62,14 +64,26 @@ body {background-color:black;}
 <div id="wrapper" class="container-fluid">
 	<div>
 		<div class="row">
-			<div id="plug" class="col-md-6 col-xs-6 guage main_guage"></div>
-			<div id="tub" class="col-md-6 col-xs-6 guage main_guage"></div>
+			<div class="col-md-6 col-xs-6">
+				<div id="plug" class="guage main_guage"></div>
+			</div>
+			<div class="col-md-6 col-xs-6">
+				<div id="tub" class="guage main_guage"></div>
+			</div>
 		</div>
 		<div class="row">
-			<div id="plug_adverage" class="col-md-3 col-xs-6 guage sub_guage"></div>
-			<div id="plug_peak" class="col-md-3 col-xs-6 guage sub_guage"></div>
-			<div id="tub_adverage" class="col-md-3 col-xs-6 guage sub_guage"></div>
-			<div id="tub_peak" class="col-md-3 col-xs-6 guage sub_guage"></div>
+			<div class="col-md-3 col-xs-6">
+				<div id="plug_adverage" class="guage sub_guage"></div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div id="plug_peak" class="guage sub_guage"></div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div id="tub_adverage" class="guage sub_guage"></div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div id="tub_peak" class="guage sub_guage"></div>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-3 info"><a href="history.php" class="today link">View todays data</a></div>
