@@ -11,7 +11,7 @@ body {background-color:black;}
 /* .large_gage {width: 660px; height: 400px;} */
 /* .small_gage {width: 323px; height: 325px;} */
 .h4 {
-    	color: white;
+	color: white;
     	font-family: Tahoma;
     	text-decoration: none;
     	margin-left: 20px;
@@ -64,9 +64,9 @@ body {background-color:black;}
 		<div id="tub_peak" class="col-md-3 guage"></div>
 	</div>
 	<div class="row guage">
-		<h4><a href="history.php" class="today link">View todays data</a></h4>
-		<h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4>
-		<h4><a href="history.php" class="historic link">View historic data</a></h4>
+		<div class="col-md-3"><h4><a href="history.php" class="today link">View todays data</a></h4></div>
+		<div class="col-md-3"><h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4></div>
+		<div class="col-md-3"><h4><a href="history.php" class="historic link">View historic data</a></h4></div>
 	</div>
    	<div class="row guage">
 	    	<h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4>
