@@ -52,7 +52,7 @@ body {background-color:black;}
 </style>
 </head>
 <body>
-<div id="wrapper" class="container-fluid" height="100%">
+<div id="wrapper" class="container" height="100%">
 	<div class="row" height="100%">
 		<div class="row">
 			<div id="plug" class="col-md-6 guage"></div>
