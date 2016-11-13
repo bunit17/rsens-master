@@ -24,7 +24,6 @@ body {background-color:black;}
     font-family: Tahoma;
     text-decoration: none;
     padding-left: 20px;
-	background-color: red;
 }
 .text_row{
 	height: 30px;
@@ -51,8 +50,8 @@ body {background-color:black;}
 	</td>
   </tr>
   <tr class="text_row">
-	<td id="error_row" class="table_cell error_text " colspan="4">
-    Please take a picture of the screen and email rsens@nb221.com. <span id="error"></span>
+	<td id="" class="table_cell error_text " colspan="4">
+    If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
 	</td>
   </tr>
 </table>
@@ -132,159 +131,27 @@ body {background-color:black;}
       counter: true
     });
 	
-	var error1 = false;
-	var error2 = false;
 	
 	 setInterval(function() {
-		  /* $.getJSON('monitor_adverage.php', function(data) {
+		  $.getJSON('monitor_adverage.php', function(data) {
 		  if(data){
           plug_adverage.refresh(data.plug_adverage);
 		  plug_peak.refresh(data.plug_peak);
           tub_adverage.refresh(data.tub_adverage);
           tub_peak.refresh(data.tub_peak);
 		  }
-		  }); */
-		  
-		  		$.ajax({
-				url: "monitor_adverage.php", 
-				data: {value: 1},
-				type: 'post',
-				error: function(XMLHttpRequest, textStatus, errorThrown){
-					$("#error_row").show();
-					//alert('Monitor average status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-				},
-				success: function(data){
-						error1 = false;
-					
-						try {
-							json = JSON.parse(data);
-						}
-						catch (e) {
-       						error1 = true;
-							$("#error").text('Monitor average status: json error, data: ' + e);
-							$("#error_row").show();
-						}
-					
-					if(json){
-					
-					if(!error2){
-					$("#error_row").hide();
-					}
-					
-					if(json.plug_adverage && json.plug_adverage>0){
-					plug_adverage.refresh(json.plug_adverage);
-					}else{
-						error1 = true;
-					$("#error").text('Monitor average status: plug_adverage data throwing an error, plug_adverage value: ' + json.plug_adverage);
-					$("#error_row").show();
-					}
-					
-					if(json.plug_peak && json.plug_peak>0){
-					 plug_peak.refresh(json.plug_peak);
-					}else{
-						error1 = true;
-					$("#error").text('Monitor average status: plug_peak data throwing an error, plug_peak value: ' + json.plug_peak);
-					$("#error_row").show();
-					}
-					
-					if(json.tub_adverage && json.tub_adverage>0){
-					tub_adverage.refresh(json.tub_adverage);
-					}else{
-						error1 = true;
-					$("#error").text('Monitor average status: tub_adverage data throwing an error, tub_adverage value: ' + json.tub_adverage);
-					$("#error_row").show();
-					}
-					
-					if(json.tub_peak && json.tub_peak>0){
-					tub_peak.refresh(json.tub_peak);
-					}else{
-					error1 = true;
-					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
-					$("#error_row").show();
-					}
-					}
-				}
-			});
-		  
+		  });
         }, 30000);
 	
 	setInterval(function() {
-			/* $.getJSON('monitor.php', function(data) {
+			$.getJSON('monitor.php', function(data) {
 			if(data.plug){
 			plug.refresh(data.plug);
 			}
 			if(data.tub){
 			tub.refresh(data.tub);
 			}
-			}); */
-			
-			$.ajax({
-				url: "monitor.php", 
-				data: {value: 1},
-				type: 'post',
-				error: function(XMLHttpRequest, textStatus, errorThrown){
-					$("#error").text('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-					$("#error_row").show();
-					//alert('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-				},
-				success: function(data){
-					error2 = false;
-					
-					try {
-						json = jQuery.parseJSON(data);
-					  } catch (e) {
-							error1 = true;
-							$("#error").text('Monitor status: json error, data: ' + data);
-							$("#error_row").show();
-					
-					  }
-					if(json){  
-					
-					if(!error1){
-					$("#error_row").hide();
-					}
-					
-					if(json.plug && json.plug>0){
-					plug.refresh(json.plug);
-					}else{
-					error2 = true;
-					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.plug);
-					$("#error_row").show();
-					}
-					
-					if(json.tub && json.tub>0){
-					tub.refresh(json.tub);
-					}else{
-					error2 = true;
-					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
-					$("#error_row").show();
-					}
-				}
-				}
 			});
-			
-			/* $.get('monitor.php', function (data) {
-			  if( !data || data === ""){
-				alert("error");
-				return;
-			  }
-			  var json;
-			  try {
-				json = jQuery.parseJSON(data);
-			  } catch (e) {
-				alert("error 2");
-				return;
-			  }
-			  
-				if(json.plug){
-				plug.refresh(json.plug);
-				}
-				if(json.tub){
-				tub.refresh(json.tub);
-				}
-			  
-			}, "text"); */
-			
          }, 1000);
 	
 	//getDataMonitor(function(){
@@ -296,66 +163,16 @@ body {background-color:black;}
 			//json_length = data.messages.length
 			//new_new = 0;
 		//});
-		  $.ajax({
-				url: "monitor_adverage.php", 
-				data: {value: 1},
-				type: 'post',
-				error: function(XMLHttpRequest, textStatus, errorThrown){
-					$("#error_row").show();
-					//alert('Monitor average status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-				},
-				success: function(data){
-						error1 = false;
-					
-						try {
-							json = JSON.parse(data);
-						}
-						catch (e) {
-       						error1 = true;
-							$("#error").text('Monitor average status: json error, data: ' + e);
-							$("#error_row").show();
-						}
-					
-					if(json){
-					
-					if(!error2){
-					$("#error_row").hide();
-					}
-					
-					if(json.plug_adverage && json.plug_adverage>0){
-					plug_adverage.refresh(json.plug_adverage);
-					}else{
-						error1 = true;
-					$("#error").text('Monitor average status: plug_adverage data throwing an error, plug_adverage value: ' + json.plug_adverage);
-					$("#error_row").show();
-					}
-					
-					if(json.plug_peak && json.plug_peak>0){
-					 plug_peak.refresh(json.plug_peak);
-					}else{
-						error1 = true;
-					$("#error").text('Monitor average status: plug_peak data throwing an error, plug_peak value: ' + json.plug_peak);
-					$("#error_row").show();
-					}
-					
-					if(json.tub_adverage && json.tub_adverage>0){
-					tub_adverage.refresh(json.tub_adverage);
-					}else{
-						error1 = true;
-					$("#error").text('Monitor average status: tub_adverage data throwing an error, tub_adverage value: ' + json.tub_adverage);
-					$("#error_row").show();
-					}
-					
-					if(json.tub_peak && json.tub_peak>0){
-					tub_peak.refresh(json.tub_peak);
-					}else{
-					error1 = true;
-					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
-					$("#error_row").show();
-					}
-					}
-				}
-			});
+		  $( document ).ready(function() {
+                $.getJSON('monitor_adverage.php', function(data) {
+                        if(data){
+                                plug_adverage.refresh(data.plug_adverage);
+                                plug_peak.refresh(data.plug_peak);
+                                tub_adverage.refresh(data.tub_adverage);
+                                tub_peak.refresh(data.tub_peak);
+                        }
+                  });
+        });
 
 
   });
@@ -363,4 +180,3 @@ body {background-color:black;}
 
 </body>
 </html>
-
