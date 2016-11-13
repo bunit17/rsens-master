@@ -10,9 +10,7 @@
 body {background-color:black;}
 /* .large_gage {width: 660px; height: 400px;} */
 /* .small_gage {width: 323px; height: 325px;} */
-.link {
-	font-size: 30px;
-    	font-weight: bold;
+.h4 {
     	color: white;
     	font-family: Tahoma;
     	text-decoration: none;
