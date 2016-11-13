@@ -35,7 +35,7 @@
 	.info{
 		height: 4%;
 		color: white;
-		font-size: 18px;
+		font-size: 26px;
 	}
 
 	.info a{
