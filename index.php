@@ -52,8 +52,8 @@ body {background-color:black;}
 </style>
 </head>
 <body>
-<div id="wrapper" class="container" height="100%">
-	<div class="row" height="100%">
+<div id="wrapper" class="container" height="50%">
+	<div class="row" height="50%">
 		<div class="row">
 			<div id="plug" class="col-md-6 guage"></div>
 			<div id="tub" class="col-md-6 guage"></div>
