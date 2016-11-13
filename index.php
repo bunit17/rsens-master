@@ -51,9 +51,11 @@ body {background-color:black;}
 }
 .main_guage{
 	height: 60%;
+	margin-bottom: 5px;
 }
 .sub_guage{
 	height: 30%;
+	margin-bottom: 5px;
 }
 .info{
 	height: 5%;
