@@ -27,7 +27,7 @@
 		background-color: #007FDF;	
 	}
 	.main_guage{
-		height: 60%;
+		height: 58%;
 	}
 	.sub_guage{
 		height: 28%;
@@ -35,6 +35,7 @@
 	.info{
 		height: 4%;
 		color: white;
+		font-size: 18px;
 	}
 
 	.info a{
