@@ -46,7 +46,15 @@ body {background-color:black;}
 }
 .guage{
 	background-color: #007FDF;
+}
+.main_guage{
+	height: 50%;
+}
+.sub_guage{
 	height: 30%;
+}
+.info{
+	height: 10%;
 }
 </style>
 </head>
@@ -54,24 +62,24 @@ body {background-color:black;}
 <div id="wrapper" class="container-responsive">
 	<div height="80%">
 		<div class="row">
-			<div id="plug" class="col-md-6 guage"></div>
-			<div id="tub" class="col-md-6 guage"></div>
+			<div id="plug" class="col-md-6 guage main_guage"></div>
+			<div id="tub" class="col-md-6 guage main_guage"></div>
 		</div>
 		<div class="row">
-			<div id="plug_adverage" class="col-md-3 guage"></div>
-			<div id="plug_peak" class="col-md-3 guage"></div>
-			<div id="tub_adverage" class="col-md-3 guage"></div>
-			<div id="tub_peak" class="col-md-3 guage"></div>
+			<div id="plug_adverage" class="col-md-3 guage sub_guage"></div>
+			<div id="plug_peak" class="col-md-3 guage sub_guage"></div>
+			<div id="tub_adverage" class="col-md-3 guage sub_guage"></div>
+			<div id="tub_peak" class="col-md-3 guage sub_guage"></div>
 		</div>
 		<div class="row">
-			<div class="row">
+			<div class="row info">
 				<h4><a href="history.php" class="today link">View todays data</a></h4>
 				<h4><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></h4>
 				<h4><a href="history.php" class="historic link">View historic data</a></h4>
 			</div>
 		</div>
-		<div class="row">>
-			<td colspan="4"><h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4></td>
+		<div class="row info">
+			<h4>If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</h4>
 		</div>
 	</div>
 </div>
