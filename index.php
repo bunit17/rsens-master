@@ -5,46 +5,51 @@
 <script src="scripts/justgage-1.1.0.min.js"></script>
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
-body {background-color:black;}
+	body {background-color:black;}
 /* .large_gage {width: 660px; height: 400px;} */
 /* .small_gage {width: 323px; height: 325px;} */
-.h4 {
-	color: white;
-    	font-family: Tahoma;
-    	text-decoration: none;
-    	margin-left: 20px;
-}
-.error_text {
-	font-size: 20px;
-    	font-weight: bold;
-    	color: white;
-    	font-family: Tahoma;
-    	text-decoration: none;
-    	padding-left: 20px;
-}
+	.h4 {
+		color: white;
+		font-family: Tahoma;
+		text-decoration: none;
+		margin-left: 20px;
+	}
+	.error_text {
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		font-family: Tahoma;
+		text-decoration: none;
+		padding-left: 20px;
+	}
 
-.guage{
-	background-color: #007FDF;	
-}
-.main_guage{
-	height: 55%;
-}
-.sub_guage{
-	height: 27%;
-}
-.info{
-	height: 3%;
-	color: white;
-}
+	.guage{
+		background-color: #007FDF;	
+	}
+	.main_guage{
+		height: 55%;
+	}
+	.sub_guage{
+		height: 27%;
+	}
+	.info{
+		height: 3%;
+		color: white;
+	}
 
-.info a{
-	color: white;
-}
-	
-.col{
-  padding-right:5px;
-  padding-left:5px;
-}
+	.info a{
+		color: white;
+	}
+
+	.col{
+		padding-right:5px;
+		padding-left:5px;
+	}
+
+	.row{
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
 
 </style>
 </head>
