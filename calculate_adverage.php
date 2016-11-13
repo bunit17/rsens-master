@@ -2,7 +2,7 @@
 require("database_conc.inc");
 $stmt2 = $link->prepare("DELETE FROM `tub_raw` WHERE `timestamp` < ADDDATE(NOW(), INTERVAL -5 MINUTE)");
 $stmt2->execute();
-$stmt3 = $link->prepare("DELETE FROM `plug_raw` WHERE `timestamp` < ADDDATE(NOW(), INTERVAL -5 MINUTE");
+$stmt3 = $link->prepare("DELETE FROM `plug_raw` WHERE `timestamp` < ADDDATE(NOW(), INTERVAL -5 MINUTE)");
 $stmt3->execute();
 
 $stmt = $link->prepare("INSERT INTO adverage_data (plug_adverage, plug_peak, plug_sd, tub_adverage, tub_peak, tub_sd) 
