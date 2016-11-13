@@ -22,43 +22,19 @@ body {background-color:black;}
     	text-decoration: none;
     	padding-left: 20px;
 }
-.text_row{
-	height: 30px;
-}
-.Menu_row{
-	height: 30px;
-}
-	
-.Help_row{
-	height: 30px;
-}
 
-.Main_row{
-	height: 50%;
-	width: 100%;
-	padding: 2px;
-}
-
-.Sub_row{
-	height: 30%;
-	width: 100%;
-	padding: 2px;
-}
 .guage{
 	background-color: #007FDF;	
 }
 .main_guage{
 	height: 55%;
-	margin-bottom:30px;
 }
 .sub_guage{
 	height: 27%;
-	margin-bottom: 30px;
 }
 .info{
 	height: 3%;
 	color: white;
-	margin-bottom: 10px;
 }
 
 .info a{
