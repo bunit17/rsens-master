@@ -1,8 +1,9 @@
 <html>
 <head>
 <script src="scripts/jquery-1.11.3.min.js"></script>
- <script src="scripts/raphael-2.1.4.min.js"></script>
-  <script src="scripts/justgage-1.1.0.min.js"></script>
+<script src="scripts/raphael-2.1.4.min.js"></script>
+<script src="scripts/justgage-1.1.0.min.js"></script>
+<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
 .table  {border-spacing:10; width:100%; height:100%;}
 .table_cell {background-color:#007FDF;}
