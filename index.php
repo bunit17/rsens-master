@@ -55,8 +55,8 @@ body {background-color:black;}
 <div id="wrapper" class="container" height="50%">
 	<div class="row" height="50%">
 		<div class="row">
-			<div id="plug" class="col-md-6 guage"></div>
-			<div id="tub" class="col-md-6 guage"></div>
+			<div id="plug" class="col-md-6 guage" height="50%"></div>
+			<div id="tub" class="col-md-6 guage" height="50%"></div>
 		</div>
 		<div class="row">
 			<div id="plug_adverage" class="col-md-3 guage"></div>
