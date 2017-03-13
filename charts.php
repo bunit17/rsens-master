@@ -88,11 +88,11 @@
 function drawLineChart() {
 
     // Add a helper to format timestamp data
-    /* Date.prototype.formatMMDDYYYY = function() {
-        return (this.getMonth() + 1) +
-        "/" +  this.getDate() +
+    Date.prototype.formatDDMMYYYY = function() {
+        return this.getDate() +
+        "/" +  (this.getMonth() + 1) +
         "/" +  this.getFullYear();
-    } */
+    }
 
     var jsonData = $.ajax({
       url: 'charting.php',
@@ -103,8 +103,10 @@ function drawLineChart() {
       var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
         labels.push(new Date(average.timestamp));
-        tub.push(parseFloat(average.tub_adverage));
-		plug.push(parseFloat(average.plug_adverage));
+		tub.push(average.tub_adverage);
+		plug.push(average.plug_adverage);
+        //tub.push(parseFloat(average.tub_adverage));
+		//plug.push(parseFloat(average.plug_adverage));
       });
 
       // Create the chart.js data structure using 'labels' and 'data'
