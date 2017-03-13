@@ -102,7 +102,7 @@ function drawLineChart() {
       // Split timestamp and data into separate arrays
       var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
-        labels.push(new Date(average.timestamp).formatDDMMYYYY());
+        labels.push(new Date(average.timestamp));
 		//tub.push(average.tub_adverage);
 		//plug.push(average.plug_adverage);
         tub.push(parseFloat(average.tub_adverage));
