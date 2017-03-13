@@ -29,7 +29,7 @@
 	
 	.chart{
 		background-color: #FFF;
-		width: 50%;
+		width: 100%;
 		height: 600px;
 		
 	}
@@ -121,11 +121,15 @@ function drawLineChart() {
 		//labels: [1, 2, 3, 4, 5],
         datasets : [{
             data                  : tub,
-			label: "Tub 0430 Average"
+			label: "Tub 0430 Average",
+			borderColor: 'rgba(255,99,132,1)',
+			backgroundColor: 'rgba(255, 99, 132, 0.2)'
         },
 		{
             data                  : plug,
-			label: "Plug 0430 Average"
+			label: "Plug 0430 Average",
+			borderColor: 'rgba(54, 162, 235, 1)',
+			backgroundColor: 'rgba(54, 162, 235, 0.2)'
         },
 		]
       };
@@ -140,9 +144,7 @@ function drawLineChart() {
 			options: {
 				scales: {
 					xAxes: [{
-						time: {
-							unit: 'week'
-						}
+						display: false
 					}],
 					yAxes: [{
 						ticks: {
