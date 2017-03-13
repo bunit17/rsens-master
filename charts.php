@@ -141,11 +141,13 @@ function drawLineChart() {
 			},
 			options: {
 				scales: {
-					/* xAxes: [{
-						time: {
-							unit: 'day'
+					xAxes: [{
+						ticks: {
+							max: 6,
+							min: 0,
+							stepSize: 1
 						}
-					}], */
+					}],
 					yAxes: [{
 						ticks: {
 							max: 120,
