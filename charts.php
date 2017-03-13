@@ -29,6 +29,8 @@
 	
 	.chart{
 		background-color: #FFF;
+		max-height: 400px;
+		max-width: 600px;
 		
 	}
 	
