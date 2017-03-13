@@ -113,7 +113,7 @@ function drawLineChart() {
       // Create the chart.js data structure using 'labels' and 'data'
       var tempData = {
         //labels : labels,
-		labels: ["1", "2", "3","4", "5"],
+		labels: [1, 2, 3, 4, 5],
         datasets : [{
             fillColor             : "rgba(151,187,205,0.2)",
             strokeColor           : "rgba(151,187,205,1)",
