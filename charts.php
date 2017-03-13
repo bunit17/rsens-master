@@ -87,6 +87,8 @@
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script>
 
+var tempData
+
 function drawLineChart() {
 
     // Add a helper to format timestamp data
@@ -112,7 +114,7 @@ function drawLineChart() {
       });
 
       // Create the chart.js data structure using 'labels' and 'data'
-      var tempData = {
+      tempData = {
         //labels : labels,
 		labels: [1, 2, 3, 4, 5],
         datasets : [{
