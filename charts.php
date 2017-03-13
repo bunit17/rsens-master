@@ -90,7 +90,7 @@ function drawLineChart() {
     } */
 
     var jsonData = $.ajax({
-      url: 'http://localhost/charting.php',
+      url: 'charting.php',
       dataType: 'json',
     }).done(function (results) {
 
