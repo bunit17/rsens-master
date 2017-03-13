@@ -134,10 +134,10 @@ function drawLineChart() {
 			options: {
 				scales: {
 					xAxes: [{
-						ticks: {
-							max: 6,
-							min: 0,
-							stepSize: 1
+						time: {
+							displayFormats: {
+								day: 'll MMM'
+							}
 						}
 					}],
 					yAxes: [{
