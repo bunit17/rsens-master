@@ -127,14 +127,6 @@ function drawLineChart() {
 					label: labels,
 					data: tempData
 				}]
-			},
-			options: {
-				scales: {
-					xAxes: [{
-						type: 'linear',
-						position: 'bottom'
-					}]
-				}
 			}
 		});
     });
