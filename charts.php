@@ -130,11 +130,7 @@ function drawLineChart() {
       // Instantiate a new chart
 	 	var LineChart = new Chart(ctx, {
 			type: 'line',
-			data: {
-				datasets: [{
-					label: "Last 300 0445 Averages",
-					data: tempData
-				}]
+			data: tempData
 			},
 			options: {
 				scales: {
