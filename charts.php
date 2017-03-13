@@ -26,6 +26,11 @@
 	.guage{
 		background-color: #007FDF;	
 	}
+	
+	.chart{
+		background-color: #FFF;	
+	}
+	
 	.main_guage{
 		height: 58%;
 	}
@@ -56,7 +61,7 @@
 </head>
 <body>
 <div id="wrapper" class="container-fluid">
-	<div>
+	<div class="chart">
 	  <canvas id="430amAverage" width="400" height="400"></canvas>
   </div>
   <div class="row">
