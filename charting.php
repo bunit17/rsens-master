@@ -9,12 +9,14 @@ if (!($stmt = $link->prepare("SELECT plug_raw.decibel FROM plug_raw ORDER BY plu
 if (!$stmt->execute()){
 	header('HTTP/1.1 500 database execute error: '.$stmt->errno, TRUE, 500);
 }
-$stmt->bind_result($avg);
-	while ($stmt->fetch()) {
-		$json['average'] = $avg;
-	}
 
-echo json_encode($json);
+while($r = mysqli_fetch_assoc($stmt)) {
+    $rows[] = $r;
+}
+//print json_encode($rows);
+	
+	
+echo json_encode($rows);
 
 mysqli_close($link);
 
