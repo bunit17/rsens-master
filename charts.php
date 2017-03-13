@@ -132,17 +132,17 @@ function drawLineChart() {
 			type: 'line',
 			data: {
 				datasets: [{
-					label: "0430 averages",
+					label: "Last 300 0445 Averages",
 					data: tempData
 				}]
 			},
 			options: {
 				scales: {
-					xAxes: [{
+					/* xAxes: [{
 						time: {
 							unit: 'day'
 						}
-					}],
+					}], */
 					yAxes: [{
 						ticks: {
 							max: 120,
