@@ -29,6 +29,8 @@
 	
 	.chart{
 		background-color: #FFF;
+		width: 50%;
+		height: 600px;
 		
 	}
 	
@@ -106,7 +108,7 @@ function drawLineChart() {
       // Split timestamp and data into separate arrays
       var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
-        labels.push(new Date(average.timestamp));
+        labels.push(new Date(average.timestamp).formatDDMMYYYY());
 		//tub.push(average.tub_adverage);
 		//plug.push(average.plug_adverage);
         tub.push(parseFloat(average.tub_adverage));
@@ -144,9 +146,9 @@ function drawLineChart() {
 					}],
 					yAxes: [{
 						ticks: {
-							max: 120,
-							min: 40,
-							stepSize: 6
+							max: 70,
+							min: 30,
+							stepSize: 3
 						}
 					}]
 				}
