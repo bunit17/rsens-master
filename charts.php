@@ -115,11 +115,11 @@ function drawLineChart() {
 
       // Create the chart.js data structure using 'labels' and 'data'
       tempData = {
-        //labels : labels,
-		labels: [1, 2, 3, 4, 5],
+        labels : labels,
+		//labels: [1, 2, 3, 4, 5],
         datasets : [{
-            //data                  : tub,
-			data: [100, 110, 105, 100, 120],
+            data                  : tub,
+			//data: [100, 110, 105, 100, 120],
 			label: "Tub 0430 Average"
         }]
       };
