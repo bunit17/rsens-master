@@ -63,7 +63,7 @@
 <body>
 <div id="wrapper" class="container-fluid">
 	<div class="chart">
-	  <canvas id="430amAverage" width="400" height="400"></canvas>
+	  <canvas id="430amAverage" width="400px" height="400px"></canvas>
   </div>
   <div class="row">
     <div class="col-md-4 col">
@@ -119,13 +119,13 @@ function drawLineChart() {
 		//labels: [1, 2, 3, 4, 5],
         datasets : [{
             data                  : tub,
-			label: "Tub 0430 Average",
+			label: "Tub 0445 Average",
 			borderColor: 'rgba(255,99,132,1)',
 			backgroundColor: 'rgba(255, 99, 132, 0.2)'
         },
 		{
             data                  : plug,
-			label: "Plug 0430 Average",
+			label: "Plug 0445 Average",
 			borderColor: 'rgba(54, 162, 235, 1)',
 			backgroundColor: 'rgba(54, 162, 235, 0.2)'
         },
