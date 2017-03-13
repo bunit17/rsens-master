@@ -103,10 +103,10 @@ function drawLineChart() {
       var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
         labels.push(new Date(average.timestamp).formatDDMMYYYY());
-		tub.push(average.tub_adverage);
-		plug.push(average.plug_adverage);
-        //tub.push(parseFloat(average.tub_adverage));
-		//plug.push(parseFloat(average.plug_adverage));
+		//tub.push(average.tub_adverage);
+		//plug.push(average.plug_adverage);
+        tub.push(parseFloat(average.tub_adverage));
+		plug.push(parseFloat(average.plug_adverage));
       });
 
       // Create the chart.js data structure using 'labels' and 'data'
