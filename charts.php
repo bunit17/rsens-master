@@ -120,9 +120,23 @@ function drawLineChart() {
       var ctx = document.getElementById("430amAverage").getContext("2d");
 
       // Instantiate a new chart
-      var myLineChart = new Chart(ctx).Line(tempData, {
-        //bezierCurve: false
-      });
+		var scatterChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				datasets: [{
+					label: labels,
+					data: tempData
+				}]
+			},
+			options: {
+				scales: {
+					xAxes: [{
+						type: 'linear',
+						position: 'bottom'
+					}]
+				}
+			}
+		});
     });
   }
 
