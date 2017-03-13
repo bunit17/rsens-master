@@ -131,7 +131,7 @@ function drawLineChart() {
       var ctx = document.getElementById("430amAverage").getContext("2d");
 
       // Instantiate a new chart
-		var scatterChart = new Chart(ctx, {
+		var LineChart = new Chart(ctx, {
 			type: 'line',
 			data: {
 				datasets: [{
@@ -149,8 +149,8 @@ function drawLineChart() {
 					yAxes: [{
 						ticks: {
 							max: 120,
-							min: 0,
-							stepSize: 3
+							min: 40,
+							stepSize: 6
 						}
 					}]
 				}
