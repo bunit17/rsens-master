@@ -122,7 +122,7 @@ function drawLineChart() {
             pointHighlightFill    : "#fff",
             pointHighlightStroke  : "rgba(151,187,205,1)",
             //data                  : tub,
-			data: [100, 110, 105, 100, 120]
+			data: [100, 110, 105, 100, 120],
 			label: "Tub 0430 Average"
         }]
       };
