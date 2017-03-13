@@ -10,12 +10,12 @@ if (!$stmt->execute()){
 	header('HTTP/1.1 500 database execute error: '.$stmt->errno, TRUE, 500);
 }
 
+$sth = mysqli_query("SELECT * FROM (SELECT  MIN(timestamp) as timestamp, adverage_data.plug_adverage, adverage_data.tub_adverage, MIN(id) as id FROM adverage_data WHERE HOUR(timestamp) = 4 AND MINUTE(timestamp) = 45 GROUP BY DATE(timestamp), DAY(timestamp) ORDER BY id DESC LIMIT 300) sub ORDER BY timestamp ASC");
+
 while($r = mysqli_fetch_assoc($stmt)) {
     $rows[] = $r;
 }
-//print json_encode($rows);
-	
-	
+
 echo json_encode($rows);
 
 mysqli_close($link);
