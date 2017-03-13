@@ -29,8 +29,6 @@
 	
 	.chart{
 		background-color: #FFF;
-		width: 100%;
-		height: 600px;
 		
 	}
 	
@@ -149,7 +147,7 @@ function drawLineChart() {
 					yAxes: [{
 						ticks: {
 							max: 70,
-							min: 30,
+							min: 36,
 							stepSize: 3
 						}
 					}]
