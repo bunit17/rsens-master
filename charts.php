@@ -119,9 +119,13 @@ function drawLineChart() {
 		//labels: [1, 2, 3, 4, 5],
         datasets : [{
             data                  : tub,
-			//data: [100, 110, 105, 100, 120],
 			label: "Tub 0430 Average"
-        }]
+        },
+		{
+            data                  : plug,
+			label: "Plug 0430 Average"
+        },
+		]
       };
 
       // Get the context of the canvas element we want to select
@@ -135,9 +139,6 @@ function drawLineChart() {
 				scales: {
 					xAxes: [{
 						time: {
-							displayFormats: {
-								week: 'll MMM'
-							},
 							unit: 'week'
 						}
 					}],
