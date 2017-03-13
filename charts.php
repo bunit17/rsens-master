@@ -83,22 +83,23 @@
 function drawLineChart() {
 
     // Add a helper to format timestamp data
-    Date.prototype.formatMMDDYYYY = function() {
+    /* Date.prototype.formatMMDDYYYY = function() {
         return (this.getMonth() + 1) +
         "/" +  this.getDate() +
         "/" +  this.getFullYear();
-    }
+    } */
 
     var jsonData = $.ajax({
-      url: 'http://d.microbuilder.io:8080/test/temp',
+      url: 'http://localhost/charting.php',
       dataType: 'json',
     }).done(function (results) {
 
       // Split timestamp and data into separate arrays
       var labels = [], tub=[], plug=[];
-      results["packets"].forEach(function(packet) {
-        labels.push(new Date(packet.timestamp).formatMMDDYYYY());
-        tub.push(parseFloat(packet.payloadString));
+      results.forEach(function(average) {
+        labels.push(new Date(average.timestamp);
+        tub.push(parseFloat(average.tub_adverage));
+		plug.push(parseFloat(packet.plug_adverage));
       });
 
       // Create the chart.js data structure using 'labels' and 'data'
@@ -111,12 +112,12 @@ function drawLineChart() {
             pointStrokeColor      : "#fff",
             pointHighlightFill    : "#fff",
             pointHighlightStroke  : "rgba(151,187,205,1)",
-            data                  : data
+            data                  : tub
         }]
       };
 
       // Get the context of the canvas element we want to select
-      var ctx = document.getElementById("myLineChart").getContext("2d");
+      var ctx = document.getElementById("430amAverage").getContext("2d");
 
       // Instantiate a new chart
       var myLineChart = new Chart(ctx).Line(tempData, {
@@ -125,7 +126,7 @@ function drawLineChart() {
     });
   }
 
-  drawLineChart();
+drawLineChart();
 </script>
 
 </body>
