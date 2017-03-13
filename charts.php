@@ -120,6 +120,7 @@ function drawLineChart() {
             pointHighlightFill    : "#fff",
             pointHighlightStroke  : "rgba(151,187,205,1)",
             data                  : tub
+			label: "Tub 0430 Average"
         }]
       };
 
@@ -131,7 +132,7 @@ function drawLineChart() {
 			type: 'line',
 			data: {
 				datasets: [{
-					label: labels,
+					label: "0430 averages",
 					data: tempData
 				}]
 			}
