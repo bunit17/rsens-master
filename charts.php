@@ -133,7 +133,7 @@ function drawLineChart() {
       var ctx = document.getElementById("430amAverage").getContext("2d");
 
       // Instantiate a new chart
-		var LineChart = new Chart(ctx, {
+	/* 	var LineChart = new Chart(ctx, {
 			type: 'line',
 			data: {
 				datasets: [{
@@ -159,8 +159,34 @@ function drawLineChart() {
 					}]
 				}
 			}
+		}); */
+		var scatterChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				datasets: [{
+					label: 'Scatter Dataset',
+					data: [{
+						x: -10,
+						y: 0
+					}, {
+						x: 0,
+						y: 10
+					}, {
+						x: 10,
+						y: 5
+					}]
+				}]
+			},
+			options: {
+				scales: {
+					xAxes: [{
+						type: 'linear',
+						position: 'bottom'
+					}]
+				}
+			}
 		});
-    });
+	});
   }
 
 drawLineChart();
