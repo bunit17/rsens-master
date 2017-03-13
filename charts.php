@@ -85,6 +85,9 @@
 </div>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script>
+
+var labels = [], tub=[], plug=[];
+
 function drawLineChart() {
 
     // Add a helper to format timestamp data
@@ -100,7 +103,7 @@ function drawLineChart() {
     }).done(function (results) {
 
       // Split timestamp and data into separate arrays
-      var labels = [], tub=[], plug=[];
+      //var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
         labels.push(new Date(average.timestamp));
 		//tub.push(average.tub_adverage);
