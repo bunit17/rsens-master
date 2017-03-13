@@ -136,8 +136,9 @@ function drawLineChart() {
 					xAxes: [{
 						time: {
 							displayFormats: {
-								day: 'll MMM'
-							}
+								week: 'll MMM'
+							},
+							unit: 'week'
 						}
 					}],
 					yAxes: [{
