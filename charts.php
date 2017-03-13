@@ -29,8 +29,7 @@
 	
 	.chart{
 		background-color: #FFF;
-		height: 75%;
-		width: 95%;
+		
 	}
 	
 	.main_guage{
