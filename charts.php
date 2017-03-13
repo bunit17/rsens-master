@@ -135,6 +135,22 @@ function drawLineChart() {
 					label: "0430 averages",
 					data: tempData
 				}]
+			},
+			options: {
+				scales: {
+					xAxes: [{
+						time: {
+							unit: 'day'
+						}
+					}],
+					yAxes: [{
+						ticks: {
+							max: 120,
+							min: 0,
+							stepSize: 3
+						}
+					}]
+				}
 			}
 		});
     });
