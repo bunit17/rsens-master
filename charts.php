@@ -86,8 +86,6 @@
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script>
 
-var labels = [], tub=[], plug=[];
-
 function drawLineChart() {
 
     // Add a helper to format timestamp data
@@ -103,7 +101,7 @@ function drawLineChart() {
     }).done(function (results) {
 
       // Split timestamp and data into separate arrays
-      //var labels = [], tub=[], plug=[];
+      var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
         labels.push(new Date(average.timestamp));
 		//tub.push(average.tub_adverage);
@@ -114,7 +112,8 @@ function drawLineChart() {
 
       // Create the chart.js data structure using 'labels' and 'data'
       var tempData = {
-        labels : labels,
+        //labels : labels,
+		labels: ["1", "2", "3","4", "5"]
         datasets : [{
             fillColor             : "rgba(151,187,205,0.2)",
             strokeColor           : "rgba(151,187,205,1)",
@@ -122,7 +121,8 @@ function drawLineChart() {
             pointStrokeColor      : "#fff",
             pointHighlightFill    : "#fff",
             pointHighlightStroke  : "rgba(151,187,205,1)",
-            data                  : tub,
+            //data                  : tub,
+			data: [100, 110, 105, 100, 120]
 			label: "Tub 0430 Average"
         }]
       };
