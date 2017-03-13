@@ -116,12 +116,6 @@ function drawLineChart() {
         //labels : labels,
 		labels: [1, 2, 3, 4, 5],
         datasets : [{
-            fillColor             : "rgba(151,187,205,0.2)",
-            strokeColor           : "rgba(151,187,205,1)",
-            pointColor            : "rgba(151,187,205,1)",
-            pointStrokeColor      : "#fff",
-            pointHighlightFill    : "#fff",
-            pointHighlightStroke  : "rgba(151,187,205,1)",
             //data                  : tub,
 			data: [100, 110, 105, 100, 120],
 			label: "Tub 0430 Average"
@@ -132,7 +126,7 @@ function drawLineChart() {
       var ctx = document.getElementById("430amAverage").getContext("2d");
 
       // Instantiate a new chart
-	/* 	var LineChart = new Chart(ctx, {
+	 	var LineChart = new Chart(ctx, {
 			type: 'line',
 			data: {
 				datasets: [{
@@ -158,8 +152,8 @@ function drawLineChart() {
 					}]
 				}
 			}
-		}); */
-		var scatterChart = new Chart(ctx, {
+		}); 
+/* 		var scatterChart = new Chart(ctx, {
 			type: 'line',
 			data: {
 				datasets: [{
@@ -184,7 +178,7 @@ function drawLineChart() {
 					}]
 				}
 			}
-		});
+		}); */
 	});
   }
 
