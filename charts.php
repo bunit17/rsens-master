@@ -99,7 +99,7 @@ function drawLineChart() {
       results.forEach(function(average) {
         labels.push(new Date(average.timestamp));
         tub.push(parseFloat(average.tub_adverage));
-		plug.push(parseFloat(packet.plug_adverage));
+		plug.push(parseFloat(average.plug_adverage));
       });
 
       // Create the chart.js data structure using 'labels' and 'data'
