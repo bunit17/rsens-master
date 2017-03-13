@@ -130,8 +130,7 @@ function drawLineChart() {
       // Instantiate a new chart
 	 	var LineChart = new Chart(ctx, {
 			type: 'line',
-			data: tempData
-			},
+			data: tempData,
 			options: {
 				scales: {
 					xAxes: [{
