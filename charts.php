@@ -31,7 +31,6 @@
 		background-color: #FFF;
 		max-height: 500px;
 		height: 500px;
-		max-width: 500px;
 		
 	}
 	
@@ -66,7 +65,7 @@
 <body>
 <div id="wrapper" class="container-fluid">
 	<div class="chart">
-	  <canvas id="QuietAverage" width="400px" height="400px"></canvas>
+	  <canvas id="QuietAverage" width="100%" height="400px"></canvas>
   </div>
   <div class="row">
     <div class="col-md-4 col">
