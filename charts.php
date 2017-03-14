@@ -66,7 +66,7 @@
 <body>
 <div id="wrapper" class="container-fluid">
 	<div class="chart">
-	  <canvas id="430amAverage" width="400px" height="400px"></canvas>
+	  <canvas id="QuietAverage" width="400px" height="400px"></canvas>
   </div>
   <div class="row">
     <div class="col-md-4 col">
@@ -122,13 +122,13 @@ function drawLineChart() {
 		//labels: [1, 2, 3, 4, 5],
         datasets : [{
             data                  : tub,
-			label: "Tub 0445 Average",
+			label: "Tub 0530 Average",
 			borderColor: 'rgba(255,99,132,1)',
 			backgroundColor: 'rgba(255, 99, 132, 0.2)'
         },
 		{
             data                  : plug,
-			label: "Plug 0445 Average",
+			label: "Plug 0530 Average",
 			borderColor: 'rgba(54, 162, 235, 1)',
 			backgroundColor: 'rgba(54, 162, 235, 0.2)'
         },
@@ -136,7 +136,7 @@ function drawLineChart() {
       };
 
       // Get the context of the canvas element we want to select
-      var ctx = document.getElementById("430amAverage").getContext("2d");
+      var ctx = document.getElementById("QuietAverage").getContext("2d");
 
       // Instantiate a new chart
 	 	var LineChart = new Chart(ctx, {
