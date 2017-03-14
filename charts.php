@@ -141,8 +141,6 @@ function drawLineChart() {
 	 	var LineChart = new Chart(ctx, {
 			type: 'line',
 			data: tempData,
-			responsive:true,
-			maintainAspectRatio: false,
 			options: {
 				scales: {
 					xAxes: [{
@@ -155,7 +153,9 @@ function drawLineChart() {
 							stepSize: 3
 						}
 					}]
-				}
+				},
+				responsive:true,
+				maintainAspectRatio: false
 			}
 		}); 
 /* 		var scatterChart = new Chart(ctx, {
