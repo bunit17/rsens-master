@@ -141,6 +141,8 @@ function drawLineChart() {
 	 	var LineChart = new Chart(ctx, {
 			type: 'line',
 			data: tempData,
+			responsive:true,
+			maintainAspectRatio: false,
 			options: {
 				scales: {
 					xAxes: [{
