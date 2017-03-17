@@ -30,7 +30,7 @@
 	.chart{
 		background-color: #FFF;
 		max-height: 500px;
-		height: 45%;
+		height: 40%;
 		margin: 10px;
 		
 	}
