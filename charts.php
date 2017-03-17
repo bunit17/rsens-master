@@ -65,7 +65,10 @@
 <body>
 <div id="wrapper" class="container-fluid">
 	<div class="chart">
-	  <canvas id="QuietAverage" width="100%" height="400px"></canvas>
+	  <canvas id="QuietAverage" width="100%" height="50%"></canvas>
+  </div>
+	<div class="chart">
+	  <canvas id="LoudPeak" width="100%" height="50%"></canvas>
   </div>
   <div class="row">
     <div class="col-md-4 col">
@@ -91,7 +94,7 @@
 
 var tempData
 
-function drawLineChart() {
+function draw0530AverageLineChart() {
 
     // Add a helper to format timestamp data
     Date.prototype.formatDDMMYYYY = function() {
@@ -101,7 +104,7 @@ function drawLineChart() {
     }
 
     var jsonData = $.ajax({
-      url: 'charting.php',
+      url: 'lowAverage.php',
       dataType: 'json',
     }).done(function (results) {
 
@@ -109,8 +112,7 @@ function drawLineChart() {
       var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
         labels.push(new Date(average.timestamp).formatDDMMYYYY());
-		//tub.push(average.tub_adverage);
-		//plug.push(average.plug_adverage);
+
         tub.push(parseFloat(average.tub_adverage));
 		plug.push(parseFloat(average.plug_adverage));
       });
@@ -118,7 +120,6 @@ function drawLineChart() {
       // Create the chart.js data structure using 'labels' and 'data'
       tempData = {
         labels : labels,
-		//labels: [1, 2, 3, 4, 5],
         datasets : [{
             data                  : tub,
 			label: "Tub 0530 Average",
@@ -158,36 +159,77 @@ function drawLineChart() {
 				maintainAspectRatio: false
 			}
 		}); 
-/* 		var scatterChart = new Chart(ctx, {
-			type: 'line',
-			data: {
-				datasets: [{
-					label: 'Scatter Dataset',
-					data: [{
-						x: -10,
-						y: 0
-					}, {
-						x: 0,
-						y: 10
-					}, {
-						x: 10,
-						y: 5
-					}]
-				}]
-			},
-			options: {
-				scales: {
-					xAxes: [{
-						type: 'linear',
-						position: 'bottom'
-					}]
-				}
-			}
-		}); */
 	});
   }
 
-drawLineChart();
+function draw0100PeakLineChart() {
+
+    // Add a helper to format timestamp data
+    Date.prototype.formatDDMMYYYY = function() {
+        return this.getDate() +
+        "/" +  (this.getMonth() + 1) +
+        "/" +  this.getFullYear();
+    }
+
+    var jsonData = $.ajax({
+      url: 'highPeak.php',
+      dataType: 'json',
+    }).done(function (results) {
+
+      // Split timestamp and data into separate arrays
+      var labels = [], tub=[], plug=[];
+      results.forEach(function(peak) {
+        labels.push(new Date(peak.timestamp).formatDDMMYYYY());
+        tub.push(parseFloat(peak.tub_adverage));
+		plug.push(parseFloat(peak.plug_adverage));
+      });
+
+      // Create the chart.js data structure using 'labels' and 'data'
+      tempData = {
+        labels : labels,
+        datasets : [{
+            data                  : tub,
+			label: "Tub 0100 Peak",
+			borderColor: 'rgba(255,99,132,1)',
+			backgroundColor: 'rgba(255, 99, 132, 0.2)'
+        },
+		{
+            data                  : plug,
+			label: "Plug 0100 Peak",
+			borderColor: 'rgba(54, 162, 235, 1)',
+			backgroundColor: 'rgba(54, 162, 235, 0.2)'
+        },
+		]
+      };
+
+      // Get the context of the canvas element we want to select
+      var ctx = document.getElementById("LoudPeak").getContext("2d");
+
+      // Instantiate a new chart
+	 	var LineChart = new Chart(ctx, {
+			type: 'line',
+			data: tempData,
+			options: {
+				scales: {
+					xAxes: [{
+						display: false
+					}],
+					yAxes: [{
+						ticks: {
+							max: 130,
+							min: 50,
+							stepSize: 3
+						}
+					}]
+				},
+				responsive:true,
+				maintainAspectRatio: false
+			}
+		}); 
+	});
+  }
+  
+draw0530AverageLineChart();
 </script>
 
 </body>
