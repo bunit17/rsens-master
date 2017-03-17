@@ -31,7 +31,7 @@
 		background-color: #FFF;
 		max-height: 500px;
 		height: 45%;
-		padding-bottom: 10px;
+		margin: 10px;
 		
 	}
 	
@@ -231,6 +231,7 @@ function draw0100PeakLineChart() {
   }
   
 draw0530AverageLineChart();
+draw0100PeakLineChart();
 </script>
 
 </body>
