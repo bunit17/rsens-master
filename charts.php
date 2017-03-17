@@ -30,7 +30,8 @@
 	.chart{
 		background-color: #FFF;
 		max-height: 500px;
-		height: 500px;
+		height: 45%;
+		padding-bottom: 10px;
 		
 	}
 	
@@ -65,10 +66,10 @@
 <body>
 <div id="wrapper" class="container-fluid">
 	<div class="chart">
-	  <canvas id="QuietAverage" width="100%" height="50%"></canvas>
+	  <canvas id="QuietAverage" width="100%" height="40%"></canvas>
   </div>
 	<div class="chart">
-	  <canvas id="LoudPeak" width="100%" height="50%"></canvas>
+	  <canvas id="LoudPeak" width="100%" height="40%"></canvas>
   </div>
   <div class="row">
     <div class="col-md-4 col">
@@ -180,8 +181,8 @@ function draw0100PeakLineChart() {
       var labels = [], tub=[], plug=[];
       results.forEach(function(peak) {
         labels.push(new Date(peak.timestamp).formatDDMMYYYY());
-        tub.push(parseFloat(peak.tub_adverage));
-		plug.push(parseFloat(peak.plug_adverage));
+        tub.push(parseFloat(peak.tub_peak));
+		plug.push(parseFloat(peak.plug_peak));
       });
 
       // Create the chart.js data structure using 'labels' and 'data'
