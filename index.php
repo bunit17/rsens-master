@@ -63,6 +63,11 @@
 		font-size: 3vh;
 	}
 	
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+	}
 	
 
 </style>
@@ -94,19 +99,19 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col">
-				<div class="info guage text-center"><a href="history.php" class="linkText today link">View todays data</a></div>
+				<div class="info guage text-center"><span><a href="history.php" class="linkText today link">View todays data</a></span></div>
 			</div>
 			<div class="col-md-4 col">
-				<div class="info guage text-center"><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></div>
+				<div class="info guage text-center"><span><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></span></div>
 			</div>
 			<div class="col-md-4 col">
-				<div class="info guage text-center"><a href="history.php" class="linkText historic link">View historic data</a></div>
+				<div class="info guage text-center"><span><a href="history.php" class="linkText historic link">View historic data</a></span></div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12 col">
 				<div class="info guage">
-					<p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p>
+					<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
 				</div>
 			</div>
 		</div>
@@ -114,6 +119,14 @@
 </div>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script>
+
+causeRepaintsOn = $(".info, .infoText, .linkText");
+
+$(window).resize(function() {
+    causeRepaintsOn.css("z-index", 1);
+});
+
+
   document.addEventListener("DOMContentLoaded", function(event) {
 	var plug = new JustGage({
       id: "plug",
