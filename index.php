@@ -36,6 +36,7 @@
 		height: 4%;
 		color: white;
 		font-size: 22px;
+		font-size: 10vh;
 	}
 
 	.info a{
