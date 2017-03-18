@@ -218,8 +218,8 @@ function draw0100PeakLineChart() {
 					yAxes: [{
 						ticks: {
 							max: 130,
-							min: 50,
-							stepSize: 3
+							min: 30,
+							stepSize: 12
 						}
 					}]
 				},
