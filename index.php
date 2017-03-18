@@ -59,7 +59,6 @@
 	
 	.linkText{
 		font-size: 22px;
-		font-size: 10vh;
 	}
 	
 	
