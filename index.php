@@ -36,7 +36,6 @@
 		height: 4%;
 		color: white;
 		font-size: 22px;
-		font-size: 10vh;
 	}
 
 	.info a{
@@ -52,6 +51,18 @@
 		padding-bottom: 5px;
 		padding-top: 5px;
 	}
+	
+	.infoText{
+		font-size: 20px;
+		font-size: 10vh;
+	}
+	
+	.linkText{
+		font-size: 22px;
+		font-size: 10vh;
+	}
+	
+	
 
 </style>
 </head>
@@ -82,19 +93,19 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col">
-				<div class="info guage text-center"><a href="history.php" class="today link">View todays data</a></div>
+				<div class="info guage text-center"><a href="history.php" class="linkText today link">View todays data</a></div>
 			</div>
 			<div class="col-md-4 col">
-				<div class="info guage text-center"><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></div>
+				<div class="info guage text-center"><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></div>
 			</div>
 			<div class="col-md-4 col">
-				<div class="info guage text-center"><a href="history.php" class="historic link">View historic data</a></div>
+				<div class="info guage text-center"><a href="history.php" class="linkText historic link">View historic data</a></div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12 col">
 				<div class="info guage">
-					If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
+					<p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p>
 				</div>
 			</div>
 		</div>
