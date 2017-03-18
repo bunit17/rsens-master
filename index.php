@@ -36,6 +36,7 @@
 		height: 4%;
 		color: white;
 		font-size: 22px;
+		line-height: 3vh;
 	}
 
 	.info a{
@@ -54,11 +55,12 @@
 	
 	.infoText{
 		font-size: 20px;
-		font-size: 10vh;
+		font-size: 3vh;
 	}
 	
 	.linkText{
 		font-size: 22px;
+		font-size: 3vh;
 	}
 	
 	
