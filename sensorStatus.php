@@ -21,7 +21,7 @@ if ($result_plug){
 	$plug = False;
 }
 
-$tempData = ['tub' => $tub, 'plug' => $plug]
+$tempData = ['tub' => $tub, 'plug' => $plug];
 
 echo json_encode($tempData);
 
