@@ -66,29 +66,31 @@ $(window).resize(function() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
 	var plug = new JustGage({
-		  id: "plug",
-		  value : 0,
-		  min: 0,
-		  max: 130,
-		  title: "Plug SPL dB(C)",
-		  titleFontColor: "#FFFFFF",
-		  valueFontColor: "#FFFFFF",
-		  labelFontColor: "#FFFFFF",
-		  customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-		  counter: true
+		id: "plug",
+		value : 0,
+		min: 0,
+		max: 130,
+		title: "Plug SPL dB(C)",
+		titleFontColor: "#FFFFFF",
+		valueFontColor: "#FFFFFF",
+		labelFontColor: "#FFFFFF",
+		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		counter: true,
+		relativeGaugeSize: true
     });   
 	
-   var tub = new JustGage({
-		  id: "tub",
-		  value : 0,
-		  min: 0,
-		  max: 130,
-		  title: "Tub SPL dB(C)",
-		  titleFontColor: "#FFFFFF",
-		  valueFontColor: "#FFFFFF",
-		  labelFontColor: "#FFFFFF",
-		  customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-		  counter: true
+	var tub = new JustGage({
+		id: "tub",
+		value : 0,
+		min: 0,
+		max: 130,
+		title: "Tub SPL dB(C)",
+		titleFontColor: "#FFFFFF",
+		valueFontColor: "#FFFFFF",
+		labelFontColor: "#FFFFFF",
+		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		counter: true,
+		relativeGaugeSize: true
     });
 	
 	var plug_adverage = new JustGage({
@@ -101,7 +103,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
 		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-		counter: true
+		counter: true,
+		relativeGaugeSize: true
     });
 	
 	var plug_peak = new JustGage({
@@ -114,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
 		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-		counter: true
+		counter: true,
+		relativeGaugeSize: true
     });
 	
 	var tub_adverage = new JustGage({
@@ -127,7 +131,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
 		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-		counter: true
+		counter: true,
+		relativeGaugeSize: true
     });
 	
 	var tub_peak = new JustGage({
@@ -140,7 +145,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
 		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-		counter: true
+		counter: true,
+		relativeGaugeSize: true
     });
 	
 	setInterval(function() {
