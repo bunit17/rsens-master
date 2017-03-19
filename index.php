@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		titleFontColor: "#FFFFFF",
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
-		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		customSectors: [{color : "#00FF00", lo : 0, hi : 97},{color : "#FFB90F", lo : 97, hi : 109}, {color : "#DC143C", lo : 109, hi : 130}],
 		counter: true,
 		relativeGaugeSize: true
     });   
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		titleFontColor: "#FFFFFF",
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
-		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		customSectors: [{color : "#00FF00", lo : 0, hi : 97},{color : "#FFB90F", lo : 97, hi : 109}, {color : "#DC143C", lo : 109, hi : 130}],
 		counter: true,
 		relativeGaugeSize: true
     });
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		titleFontColor: "#FFFFFF",
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
-		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		customSectors: [{color : "#00FF00", lo : 0, hi : 97},{color : "#FFB90F", lo : 97, hi : 109}, {color : "#DC143C", lo : 109, hi : 130}],
 		counter: true,
 		relativeGaugeSize: true
     });
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		titleFontColor: "#FFFFFF",
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
-		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		customSectors: [{color : "#00FF00", lo : 0, hi : 97},{color : "#FFB90F", lo : 97, hi : 109}, {color : "#DC143C", lo : 109, hi : 130}],
 		counter: true,
 		relativeGaugeSize: true
     });
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		titleFontColor: "#FFFFFF",
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
-		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		customSectors: [{color : "#00FF00", lo : 0, hi : 97},{color : "#FFB90F", lo : 97, hi : 109}, {color : "#DC143C", lo : 109, hi : 130}],
 		counter: true,
 		relativeGaugeSize: true
     });
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		titleFontColor: "#FFFFFF",
 		valueFontColor: "#FFFFFF",
 		labelFontColor: "#FFFFFF",
-		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		customSectors: [{color : "#00FF00", lo : 0, hi : 97},{color : "#FFB90F", lo : 97, hi : 109}, {color : "#DC143C", lo : 109, hi : 130}],
 		counter: true,
 		relativeGaugeSize: true
     });
