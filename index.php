@@ -57,109 +57,113 @@
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script>
 
-causeRepaintsOn = $(".info, .infoText, .linkText");
+causeRepaintsOn = $(".info, .infoText, .linkText, .guage");
 
 $(window).resize(function() {
     causeRepaintsOn.css("z-index", 1);
 });
 
 
-  document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
 	var plug = new JustGage({
-      id: "plug",
-      value : 0,
-      min: 0,
-      max: 130,
-	  title: "Plug SPL dB(C)",
-	  titleFontColor: "#FFFFFF",
-	  valueFontColor: "#FFFFFF",
-	  labelFontColor: "#FFFFFF",
-      customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-      counter: true
+		  id: "plug",
+		  value : 0,
+		  min: 0,
+		  max: 130,
+		  title: "Plug SPL dB(C)",
+		  titleFontColor: "#FFFFFF",
+		  valueFontColor: "#FFFFFF",
+		  labelFontColor: "#FFFFFF",
+		  customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		  counter: true
     });   
+	
    var tub = new JustGage({
-      id: "tub",
-      value : 0,
-      min: 0,
-      max: 130,
-	  title: "Tub SPL dB(C)",
-	  titleFontColor: "#FFFFFF",
-	  valueFontColor: "#FFFFFF",
-	  labelFontColor: "#FFFFFF",
-      customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-      counter: true
+		  id: "tub",
+		  value : 0,
+		  min: 0,
+		  max: 130,
+		  title: "Tub SPL dB(C)",
+		  titleFontColor: "#FFFFFF",
+		  valueFontColor: "#FFFFFF",
+		  labelFontColor: "#FFFFFF",
+		  customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		  counter: true
     });
+	
 	var plug_adverage = new JustGage({
-      id: "plug_adverage",
-      value : 0,
-      min: 0,
-      max: 130,
-	  title: "Plug 5 minute\nAverage SPL dB(C)",
-	  titleFontColor: "#FFFFFF",
-	  valueFontColor: "#FFFFFF",
-	  labelFontColor: "#FFFFFF",
-      customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-      counter: true
+		id: "plug_adverage",
+		value : 0,
+		min: 0,
+		max: 130,
+		title: "Plug 5 minute\nAverage SPL dB(C)",
+		titleFontColor: "#FFFFFF",
+		valueFontColor: "#FFFFFF",
+		labelFontColor: "#FFFFFF",
+		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		counter: true
     });
+	
 	var plug_peak = new JustGage({
-      id: "plug_peak",
-      value : 0,
-      min: 0,
-      max: 130,
-	  title: "Plug 5 minute\nPeak (2\u03c3)",
-	  titleFontColor: "#FFFFFF",
-	  valueFontColor: "#FFFFFF",
-	  labelFontColor: "#FFFFFF",
-      customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-      counter: true
+		id: "plug_peak",
+		value : 0,
+		min: 0,
+		max: 130,
+		title: "Plug 5 minute\nPeak (2\u03c3)",
+		titleFontColor: "#FFFFFF",
+		valueFontColor: "#FFFFFF",
+		labelFontColor: "#FFFFFF",
+		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		counter: true
     });
+	
 	var tub_adverage = new JustGage({
-      id: "tub_adverage",
-      value : 0,
-      min: 0,
-      max: 130,
-	  title: "Tub 5 minute\nAverage SPL dB(C)",
-	  titleFontColor: "#FFFFFF",
-	  valueFontColor: "#FFFFFF",
-	  labelFontColor: "#FFFFFF",
-      customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-      counter: true
+		id: "tub_adverage",
+		value : 0,
+		min: 0,
+		max: 130,
+		title: "Tub 5 minute\nAverage SPL dB(C)",
+		titleFontColor: "#FFFFFF",
+		valueFontColor: "#FFFFFF",
+		labelFontColor: "#FFFFFF",
+		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		counter: true
     });
+	
 	var tub_peak = new JustGage({
-      id: "tub_peak",
-      value : 0,
-      min: 0,
-      max: 130,
-	  title: "Tub 5 minute\nPeak (2\u03c3)",
-	  titleFontColor: "#FFFFFF",
-	  valueFontColor: "#FFFFFF",
-	  labelFontColor: "#FFFFFF",
-      customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
-      counter: true
+		id: "tub_peak",
+		value : 0,
+		min: 0,
+		max: 130,
+		title: "Tub 5 minute\nPeak (2\u03c3)",
+		titleFontColor: "#FFFFFF",
+		valueFontColor: "#FFFFFF",
+		labelFontColor: "#FFFFFF",
+		customSectors: [{color : "#00FF00", lo : 0, hi : 100},{color : "#FFB90F", lo : 100, hi : 112}, {color : "#DC143C", lo : 112, hi : 130}],
+		counter: true
     });
-	
-	
-	 setInterval(function() {
-		  $.getJSON('monitor_adverage.php', function(data) {
-		  if(data){
-          plug_adverage.refresh(data.plug_adverage);
-		  plug_peak.refresh(data.plug_peak);
-          tub_adverage.refresh(data.tub_adverage);
-          tub_peak.refresh(data.tub_peak);
-		  }
-		  });
-        }, 30000);
 	
 	setInterval(function() {
-			$.getJSON('monitor.php', function(data) {
+		$.getJSON('monitor_adverage.php', function(data) {
+			if(data){
+				plug_adverage.refresh(data.plug_adverage);
+				plug_peak.refresh(data.plug_peak);
+				tub_adverage.refresh(data.tub_adverage);
+				tub_peak.refresh(data.tub_peak);
+			}
+		});
+	}, 30000);
+	
+	setInterval(function() {
+		$.getJSON('monitor.php', function(data) {
 			if(data.plug){
-			plug.refresh(data.plug);
+				plug.refresh(data.plug);
 			}
 			if(data.tub){
-			tub.refresh(data.tub);
+				tub.refresh(data.tub);
 			}
-			});
-         }, 1000);
+		});
+	}, 1000);
 	
 	//getDataMonitor(function(){
 			//$.getJSON('http://mattburnett.co.uk/monitor.php', function(data) {
@@ -170,20 +174,20 @@ $(window).resize(function() {
 			//json_length = data.messages.length
 			//new_new = 0;
 		//});
-		  $( document ).ready(function() {
-                $.getJSON('monitor_adverage.php', function(data) {
-                        if(data){
-                                plug_adverage.refresh(data.plug_adverage);
-                                plug_peak.refresh(data.plug_peak);
-                                tub_adverage.refresh(data.tub_adverage);
-                                tub_peak.refresh(data.tub_peak);
-                        }
-                  });
-        });
+	$( document ).ready(function() {
+		$.getJSON('monitor_adverage.php', function(data) {
+			if(data){
+				plug_adverage.refresh(data.plug_adverage);
+				plug_peak.refresh(data.plug_peak);
+				tub_adverage.refresh(data.tub_adverage);
+				tub_peak.refresh(data.tub_peak);
+			}
+		});
+	});
 
 
   });
-  </script>
+</script>
 
 </body>
 </html>
