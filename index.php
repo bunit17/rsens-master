@@ -11,7 +11,7 @@
 	<div>
 		<div class="row">
 			<div class="col-md-6 col">
-				<div class="info guage text-center"><span>Plug Sensor</span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+				<div class="info guage text-center"><span>Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 			</div>
 			<div class="col-md-6 col">
 				<div class="info guage text-center"><span>Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						{
 							$('#plugStatus').css('color', 'white');
 							$('#tubStatus').css('color', 'white');
-						}, 500);
+						}, 400);
 				}
 			}
 			
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	setInterval(function() {
 		checkSensorStatus();
-	}, 3000);
+	}, 1500);
 	
 	//getDataMonitor(function(){
 			//$.getJSON('http://mattburnett.co.uk/monitor.php', function(data) {
