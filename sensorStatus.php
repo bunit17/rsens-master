@@ -10,20 +10,19 @@ $result_plug = mysqli_query($link, $sql_plug) or die("Error in Selecting " . mys
 $tempData = array();
 
 if ($result_tub){
-	tempData["Tub"] = True
+	$tempData["Tub"] = True
 }else{
-	tempData["Tub"] = False
+	$tempData["Tub"] = False
 }
 
 if ($result_plug){
-	tempData["Plug"] = True
+	$tempData["Plug"] = True
 }else{
-	tempData["Plug"] = False
+	$tempData["Plug"] = False
 }
 
 echo json_encode($tempData);
 
 mysqli_close($link);
-
 
 ?>
