@@ -10,6 +10,14 @@
 <div id="wrapper" class="container-fluid">
 	<div>
 		<div class="row">
+			<div class="col-md-6 col">
+				<div class="info guage text-center"><span>Plug Sensor </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="info guage text-center"><span>Tub Sensor</span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-6 col-xs-6 col">
 				<div id="plug" class="guage main_guage"></div>
 			</div>
@@ -149,6 +157,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		relativeGaugeSize: true
     });
 	
+	function checkSensorStatus(){
+		$.getJSON('sensorStatus.php', function(data) {
+			if(data){
+				if(data['tub']==true){
+					$('#tubStatus').css('color', 'green');
+				} else {
+					$('#tubStatus').css('color', 'grey);
+				}
+				if(data['plug']==true){
+					$('#plugStatus').css('color', 'green');
+				} else {
+					$('#plugStatus').css('color', 'red');
+				}
+			}
+			setTimeout(
+				function() 
+				{
+					$('#plugStatus').css('color', 'grey');
+					$('#tubStatus').css('color', 'grey');
+				}, 1000);
+		});
+	}
+	
 	setInterval(function() {
 		$.getJSON('monitor_adverage.php', function(data) {
 			if(data){
@@ -170,6 +201,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 		});
 	}, 1000);
+	
+	setInterval(function() {
+		checkSensorStatus();
+	}, 5000);
 	
 	//getDataMonitor(function(){
 			//$.getJSON('http://mattburnett.co.uk/monitor.php', function(data) {
