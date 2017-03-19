@@ -11,10 +11,10 @@
 	<div>
 		<div class="row">
 			<div class="col-md-6 col">
-				<div class="info guage text-center"><span>Plug Sensor </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+				<div class="info guage text-center"><span>Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 			</div>
 			<div class="col-md-6 col">
-				<div class="info guage text-center"><span>Tub Sensor</span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+				<div class="info guage text-center"><span>Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 			</div>
 		</div>
 		<div class="row">
@@ -163,20 +163,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				if(data['tub']==true){
 					$('#tubStatus').css('color', 'green');
 				} else {
-					$('#tubStatus').css('color', 'red);
+					$('#tubStatus').css('color', 'red');
 				}
 				if(data['plug']==true){
 					$('#plugStatus').css('color', 'green');
 				} else {
 					$('#plugStatus').css('color', 'red');
 				}
+				if(data['tub']==true && data['plug']==true){
+					setTimeout(
+						function() 
+						{
+							$('#plugStatus').css('color', 'white');
+							$('#tubStatus').css('color', 'white');
+						}, 750);
+				}
 			}
-			setTimeout(
-				function() 
-				{
-					$('#plugStatus').css('color', 'white');
-					$('#tubStatus').css('color', 'white');
-				}, 1000);
+			
 		});
 	}
 	
