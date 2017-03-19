@@ -98,14 +98,17 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col">
+			<div class="col-md-3 col">
 				<div class="info guage text-center"><span><a href="history.php" class="linkText today link">View todays data</a></span></div>
 			</div>
-			<div class="col-md-4 col">
+			<div class="col-md-3 col">
 				<div class="info guage text-center"><span><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></span></div>
 			</div>
-			<div class="col-md-4 col">
+			<div class="col-md-3 col">
 				<div class="info guage text-center"><span><a href="history.php" class="linkText historic link">View historic data</a></span></div>
+			</div>
+			<div class="col-md-3 col">
+				<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
 			</div>
 		</div>
 		<div class="row">

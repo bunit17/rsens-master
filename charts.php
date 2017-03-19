@@ -4,64 +4,7 @@
 <script src="scripts/raphael-2.1.4.min.js"></script>
 <script src="scripts/Chart.bundle.js"></script>
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<style type="text/css">
-	body {background-color:black;}
-/* .large_gage {width: 660px; height: 400px;} */
-/* .small_gage {width: 323px; height: 325px;} */
-	.h4 {
-		color: white;
-		font-family: Tahoma;
-		text-decoration: none;
-		margin-left: 20px;
-	}
-	.error_text {
-		font-size: 20px;
-		font-weight: bold;
-		color: white;
-		font-family: Tahoma;
-		text-decoration: none;
-		padding-left: 20px;
-	}
-
-	.guage{
-		background-color: #007FDF;	
-	}
-	
-	.chart{
-		background-color: #FFF;
-		max-height: 500px;
-		height: 40%;
-		margin: 10px;
-		
-	}
-	
-	.main_guage{
-		height: 58%;
-	}
-	.sub_guage{
-		height: 28%;
-	}
-	.info{
-		height: 4%;
-		color: white;
-		font-size: 22px;
-	}
-
-	.info a{
-		color: white;
-	}
-
-	.col{
-		padding-right:5px;
-		padding-left:5px;
-	}
-
-	.row{
-		padding-bottom: 5px;
-		padding-top: 5px;
-	}
-
-</style>
+<link href="css/rsens.css" rel="stylesheet">
 </head>
 <body>
 <div id="wrapper" class="container-fluid">
@@ -71,23 +14,26 @@
 	<div class="chart">
 	  <canvas id="LoudPeak" width="100%" height="40%"></canvas>
   </div>
-  <div class="row">
-    <div class="col-md-4 col">
-      <div class="info guage text-center"><a href="history.php" class="today link">View todays data</a></div>
-    </div>
-    <div class="col-md-4 col">
-      <div class="info guage text-center"><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="yesterday link">View yesterdays data</a></div>
-    </div>
-    <div class="col-md-4 col">
-      <div class="info guage text-center"><a href="history.php" class="historic link">View historic data</a></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 col">
-      <div class="info guage">
-        If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com
-      </div>
-    </div>
+	<div class="row">
+		<div class="col-md-3 col">
+			<div class="info guage text-center"><span><a href="history.php" class="linkText today link">View todays data</a></span></div>
+		</div>
+		<div class="col-md-3 col">
+			<div class="info guage text-center"><span><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></span></div>
+		</div>
+		<div class="col-md-3 col">
+			<div class="info guage text-center"><span><a href="history.php" class="linkText historic link">View historic data</a></span></div>
+		</div>
+		<div class="col-md-3 col">
+			<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col">
+			<div class="info guage">
+				<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
+			</div>
+		</div>
 	</div>
 </div>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
