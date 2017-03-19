@@ -12,7 +12,8 @@ $result_plug = mysqli_query($link, $sql_plug) or die("Error in Selecting " . mys
 if (mysql_num_rows($result_tub)>0){
 	$tub = True;
 }else{
-	$tub = False;
+	//$tub = False;
+	$tub = mysql_num_rows($result_tub);
 }
 
 if (mysql_num_rows($result_plug)>0){
