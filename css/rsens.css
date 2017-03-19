@@ -19,6 +19,16 @@
 	.guage{
 		background-color: #007FDF;	
 	}
+	
+		
+	.chart{
+		background-color: #FFF;
+		max-height: 500px;
+		height: 40%;
+		margin: 10px;
+		
+	}
+	
 	.main_guage{
 		height: 58%;
 	}

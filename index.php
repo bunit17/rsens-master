@@ -4,73 +4,7 @@
 <script src="scripts/raphael-2.1.4.min.js"></script>
 <script src="scripts/justgage-1.1.0.min.js"></script>
 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<style type="text/css">
-	body {background-color:black;}
-/* .large_gage {width: 660px; height: 400px;} */
-/* .small_gage {width: 323px; height: 325px;} */
-	.h4 {
-		color: white;
-		font-family: Tahoma;
-		text-decoration: none;
-		margin-left: 20px;
-	}
-	.error_text {
-		font-size: 20px;
-		font-weight: bold;
-		color: white;
-		font-family: Tahoma;
-		text-decoration: none;
-		padding-left: 20px;
-	}
-
-	.guage{
-		background-color: #007FDF;	
-	}
-	.main_guage{
-		height: 58%;
-	}
-	.sub_guage{
-		height: 28%;
-	}
-	.info{
-		height: 4%;
-		color: white;
-		font-size: 22px;
-		line-height: 3vh;
-	}
-
-	.info a{
-		color: white;
-	}
-
-	.col{
-		padding-right:5px;
-		padding-left:5px;
-	}
-
-	.row{
-		padding-bottom: 5px;
-		padding-top: 5px;
-	}
-	
-	.infoText{
-		font-size: 20px;
-		font-size: 3vh;
-	}
-	
-	.linkText{
-		font-size: 22px;
-		font-size: 3vh;
-	}
-	
-	span {
-		display: inline-block;
-		vertical-align: middle;
-		line-height: normal;
-	}
-	
-
-</style>
+<link href="css/rsens.css" rel="stylesheet">
 </head>
 <body>
 <div id="wrapper" class="container-fluid">
