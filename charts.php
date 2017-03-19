@@ -25,7 +25,7 @@
 			<div class="info guage text-center"><span><a href="history.php" class="linkText historic link">View historic data</a></span></div>
 		</div>
 		<div class="col-md-3 col">
-			<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
+			<div class="info guage text-center"><span><a href="index.php" class="linkText link">View Live Guages</a></span></div>
 		</div>
 	</div>
 	<div class="row">
@@ -96,7 +96,7 @@ function draw0530AverageLineChart() {
 					}],
 					yAxes: [{
 						ticks: {
-							max: 70,
+							max: 72,
 							min: 36,
 							stepSize: 3
 						}
