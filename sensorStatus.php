@@ -1,22 +1,22 @@
 <?php
 require("database_conc.inc");
 
-$sql_tub = "SELECT tub_raw.timestamp FROM tub_raw WHERE tub_raw.timestamp > (NOW() - INTERVAL 5 SECOND) LIMIT 5";
-$sql_plug = "SELECT plug_raw.timestamp FROM plug_raw WHERE plug_raw.timestamp > (NOW() - INTERVAL 5 SECOND) LIMIT 1";
+$sql_tub = "SELECT tub_raw.timestamp FROM tub_raw WHERE tub_raw.timestamp > (NOW() - INTERVAL 1 SECOND) LIMIT 0";
+$sql_plug = "SELECT plug_raw.timestamp FROM plug_raw WHERE plug_raw.timestamp > (NOW() - INTERVAL 1 SECOND) LIMIT 1";
 
 $result_tub = mysqli_query($link, $sql_tub) or die("Error in Selecting " . mysqli_error($link));
 $result_plug = mysqli_query($link, $sql_plug) or die("Error in Selecting " . mysqli_error($link));
 
 //$tempData = array();
 
-if (mysql_num_rows($result_tub)>0){
+if ($result_tub->num_rows>0){
 	$tub = True;
 }else{
-	//$tub = False;
-	$tub = $result_tub->num_rows;
+	$tub = False;
+	//$tub = $result_tub->num_rows;
 }
 
-if (mysql_num_rows($result_plug)>0){
+if ($result_plug->num_rows>0){
 	$plug = True;
 }else{
 	$plug = False;
