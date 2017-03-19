@@ -11,7 +11,7 @@
 	<div>
 		<div class="row">
 			<div class="col-md-6 col">
-				<div class="info guage text-center"><span>Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+				<div class="info guage text-center"><span>Plug Sensor</span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 			</div>
 			<div class="col-md-6 col">
 				<div class="info guage text-center"><span>Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
@@ -161,14 +161,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		$.getJSON('sensorStatus.php', function(data) {
 			if(data){
 				if(data['tub']==true){
-					$('#tubStatus').css('color', 'green');
+					$('#tubStatus').css('color', '#00FF00');
 				} else {
-					$('#tubStatus').css('color', 'red');
+					$('#tubStatus').css('color', '#DC143C');
 				}
 				if(data['plug']==true){
-					$('#plugStatus').css('color', 'green');
+					$('#plugStatus').css('color', '#00FF00');
 				} else {
-					$('#plugStatus').css('color', 'red');
+					$('#plugStatus').css('color', '#DC143C');
 				}
 				if(data['tub']==true && data['plug']==true){
 					setTimeout(
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						{
 							$('#plugStatus').css('color', 'white');
 							$('#tubStatus').css('color', 'white');
-						}, 750);
+						}, 500);
 				}
 			}
 			
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	setInterval(function() {
 		checkSensorStatus();
-	}, 5000);
+	}, 3000);
 	
 	//getDataMonitor(function(){
 			//$.getJSON('http://mattburnett.co.uk/monitor.php', function(data) {
