@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				if(data['tub']==true){
 					$('#tubStatus').css('color', 'green');
 				} else {
-					$('#tubStatus').css('color', 'grey);
+					$('#tubStatus').css('color', 'red);
 				}
 				if(data['plug']==true){
 					$('#plugStatus').css('color', 'green');
@@ -174,8 +174,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			setTimeout(
 				function() 
 				{
-					$('#plugStatus').css('color', 'grey');
-					$('#tubStatus').css('color', 'grey');
+					$('#plugStatus').css('color', 'white');
+					$('#tubStatus').css('color', 'white');
 				}, 1000);
 		});
 	}
