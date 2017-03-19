@@ -11,10 +11,10 @@
 	<div>
 		<div class="row">
 			<div class="col-md-6 col">
-				<div class="info guage text-center"><span>Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+				<div class="info guage text-center"><span class="infoText">Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 			</div>
 			<div class="col-md-6 col">
-				<div class="info guage text-center"><span>Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+				<div class="info guage text-center"><span class="infoText">Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 			</div>
 		</div>
 		<div class="row">
