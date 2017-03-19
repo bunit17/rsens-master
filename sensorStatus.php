@@ -7,18 +7,18 @@ $sql_plug = "SELECT plug_raw.timestamp FROM plug_raw WHERE plug_raw.timestamp > 
 $result_tub = mysqli_query($link, $sql_tub) or die("Error in Selecting " . mysqli_error($link));
 $result_plug = mysqli_query($link, $sql_plug) or die("Error in Selecting " . mysqli_error($link));
 
-$tempData = array();
+//$tempData = array();
 
 if ($result_tub){
-	$tub = True
+	$tub = True;
 }else{
-	$tub = False
+	$tub = False;
 }
 
 if ($result_plug){
-	$plug = True
+	$plug = True;
 }else{
-	$plug = False
+	$plug = False;
 }
 
 $tempData = ['tub' => $tub, 'plug' => $plug]
