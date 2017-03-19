@@ -13,7 +13,7 @@ if (mysql_num_rows($result_tub)>0){
 	$tub = True;
 }else{
 	//$tub = False;
-	$tub = mysql_num_rows($result_tub);
+	$tub = sizeof($result_tub);
 }
 
 if (mysql_num_rows($result_plug)>0){
