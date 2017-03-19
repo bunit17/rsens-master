@@ -9,13 +9,13 @@ $result_plug = mysqli_query($link, $sql_plug) or die("Error in Selecting " . mys
 
 //$tempData = array();
 
-if ($result_tub != null){
+if (mysql_num_rows($result_tub)>>0){
 	$tub = True;
 }else{
 	$tub = False;
 }
 
-if ($result_plug != null){
+if (mysql_num_rows($result_plug)>>0){
 	$plug = True;
 }else{
 	$plug = False;
