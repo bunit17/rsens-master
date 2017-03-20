@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 							if(data['tub']==true){
 								$('#tubStatus').css('color', 'white');
 							}
-						}, 400);
+						}, 300);
 				}
 			}
 			
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	setInterval(function() {
 		checkSensorStatus();
-	}, 1500);
+	}, 3000);
 	
 	//getDataMonitor(function(){
 			//$.getJSON('http://mattburnett.co.uk/monitor.php', function(data) {
