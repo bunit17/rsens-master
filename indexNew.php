@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				data: {value: 1},
 				type: 'post',
 				error: function(XMLHttpRequest, textStatus, errorThrown){
-					$("#infoText").show();
+					$("#error").show();
 					//alert('Monitor average status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
@@ -211,13 +211,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						catch (e) {
        						error1 = true;
 							$("#error").text('Monitor average status: json error, data: ' + e);
-							$("#infoText").show();
+							$("#error").show();
 						}
 					
 					if(json){
 					
 					if(!error2){
-					$("#infoText").hide();
+					$("#error").hide();
 					}
 					
 					if(json.plug_adverage && json.plug_adverage>0){
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					}else{
 						error1 = true;
 					$("#error").text('Monitor average status: plug_adverage data throwing an error, plug_adverage value: ' + json.plug_adverage);
-					$("#infoText").show();
+					$("#error").show();
 					}
 					
 					if(json.plug_peak && json.plug_peak>0){
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					}else{
 						error1 = true;
 					$("#error").text('Monitor average status: plug_peak data throwing an error, plug_peak value: ' + json.plug_peak);
-					$("#infoText").show();
+					$("#error").show();
 					}
 					
 					if(json.tub_adverage && json.tub_adverage>0){
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					}else{
 						error1 = true;
 					$("#error").text('Monitor average status: tub_adverage data throwing an error, tub_adverage value: ' + json.tub_adverage);
-					$("#infoText").show();
+					$("#error").show();
 					}
 					
 					if(json.tub_peak && json.tub_peak>0){
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					}else{
 					error1 = true;
 					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
-					$("#infoText").show();
+					$("#error").show();
 					}
 					}
 				}
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				type: 'post',
 				error: function(XMLHttpRequest, textStatus, errorThrown){
 					$("#error").text('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-					$("#infoText").show();
+					$("#error").show();
 					//alert('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
@@ -276,13 +276,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					  } catch (e) {
 							error1 = true;
 							$("#error").text('Monitor status: json error, data: ' + data);
-							$("#infoText").show();
+							$("#error").show();
 					
 					  }
 					if(json){  
 					
 					if(!error1){
-					$("#infoText").hide();
+					$("#error").hide();
 					}
 					
 					if(json.plug && json.plug>0){
@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					}else{
 					error2 = true;
 					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.plug);
-					$("#infoText").show();
+					$("#error").show();
 					}
 					
 					if(json.tub && json.tub>0){
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					}else{
 					error2 = true;
 					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
-					$("#infoText").show();
+					$("#error").show();
 					}
 				}
 				}
