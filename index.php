@@ -170,12 +170,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				} else {
 					$('#plugStatus').css('color', '#DC143C');
 				}
-				if(data['tub']==true && data['plug']==true){
+				if(data['tub']==true || data['plug']==true){
 					setTimeout(
 						function() 
 						{
-							$('#plugStatus').css('color', 'white');
-							$('#tubStatus').css('color', 'white');
+							if(data['plug']==true){
+								$('#plugStatus').css('color', 'white');
+							}
+							if(data['tub']==true){
+								$('#tubStatus').css('color', 'white');
+							}
 						}, 400);
 				}
 			}
