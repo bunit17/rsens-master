@@ -57,6 +57,7 @@
 			<div class="col-md-12 col">
 				<div class="info guage">
 					<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
+					<span><p id="error" class="infoText"></p></span>
 				</div>
 			</div>
 		</div>
@@ -209,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						}
 						catch (e) {
        						error1 = true;
-							$(".infoText").text('Monitor average status: json error, data: ' + e);
+							$("#error").text('Monitor average status: json error, data: ' + e);
 							$("#infoText").show();
 						}
 					
@@ -223,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					plug_adverage.refresh(json.plug_adverage);
 					}else{
 						error1 = true;
-					$(".infoText").text('Monitor average status: plug_adverage data throwing an error, plug_adverage value: ' + json.plug_adverage);
+					$("#error").text('Monitor average status: plug_adverage data throwing an error, plug_adverage value: ' + json.plug_adverage);
 					$("#infoText").show();
 					}
 					
@@ -231,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					 plug_peak.refresh(json.plug_peak);
 					}else{
 						error1 = true;
-					$(".infoText").text('Monitor average status: plug_peak data throwing an error, plug_peak value: ' + json.plug_peak);
+					$("#error").text('Monitor average status: plug_peak data throwing an error, plug_peak value: ' + json.plug_peak);
 					$("#infoText").show();
 					}
 					
@@ -239,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					tub_adverage.refresh(json.tub_adverage);
 					}else{
 						error1 = true;
-					$(".infoText").text('Monitor average status: tub_adverage data throwing an error, tub_adverage value: ' + json.tub_adverage);
+					$("#error").text('Monitor average status: tub_adverage data throwing an error, tub_adverage value: ' + json.tub_adverage);
 					$("#infoText").show();
 					}
 					
@@ -247,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					tub_peak.refresh(json.tub_peak);
 					}else{
 					error1 = true;
-					$(".infoText").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
+					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
 					$("#infoText").show();
 					}
 					}
@@ -263,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				data: {value: 1},
 				type: 'post',
 				error: function(XMLHttpRequest, textStatus, errorThrown){
-					$(".infoText").text('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+					$("#error").text('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 					$("#infoText").show();
 					//alert('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
@@ -274,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						json = jQuery.parseJSON(data);
 					  } catch (e) {
 							error1 = true;
-							$(".infoText").text('Monitor status: json error, data: ' + data);
+							$("#error").text('Monitor status: json error, data: ' + data);
 							$("#infoText").show();
 					
 					  }
@@ -288,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					plug.refresh(json.plug);
 					}else{
 					error2 = true;
-					$(".infoText").text('Monitor status: plug data throwing an error, plug value: ' + json.plug);
+					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.plug);
 					$("#infoText").show();
 					}
 					
@@ -296,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					tub.refresh(json.tub);
 					}else{
 					error2 = true;
-					$(".infoText").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
+					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
 					$("#infoText").show();
 					}
 				}
