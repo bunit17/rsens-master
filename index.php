@@ -185,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 			
 		});
+		return;
 	}
 	
 	setInterval(function() {
