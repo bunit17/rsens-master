@@ -56,7 +56,6 @@
 		<div id="infoText" class="row">
 			<div class="col-md-12 col">
 				<div class="info guage">
-					<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
 					<span><p id="error" class="infoText"></p></span>
 				</div>
 			</div>
