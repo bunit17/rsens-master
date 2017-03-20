@@ -188,6 +188,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		return;
 	}
 	
+	var error1 = false;
+	var error2 = false;
+	
 	setInterval(function() {
 		  
 		  		$.ajax({
