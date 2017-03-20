@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						}
 						catch (e) {
        						error1 = true;
-							$("#infoText).text('Monitor average status: json error, data: ' + e);
+							$("#infoText").text('Monitor average status: json error, data: ' + e);
 							$("#infoText").show();
 						}
 					
