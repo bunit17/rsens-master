@@ -53,9 +53,9 @@
 				<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
 			</div>
 		</div>
-		<div class="row">
+		<div id="infoText" class="row">
 			<div class="col-md-12 col">
-				<div id="infoText" class="info guage">
+				<div class="info guage">
 					<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
 				</div>
 			</div>
