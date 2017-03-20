@@ -210,46 +210,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						}
 						catch (e) {
        						error1 = true;
-							$("#error").text('Monitor average status: json error, data: ' + e);
-							$("#error").show();
+							$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor average status: json error, data: ' + e);
+							
 						}
 					
 					if(json){
 					
 					if(!error2){
-					$("#error").hide();
+						//$("#error").hide();
+						$("#error").text('If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com');
 					}
 					
 					if(json.plug_adverage && json.plug_adverage>0){
 					plug_adverage.refresh(json.plug_adverage);
 					}else{
 						error1 = true;
-					$("#error").text('Monitor average status: plug_adverage data throwing an error, plug_adverage value: ' + json.plug_adverage);
-					$("#error").show();
+					$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor average status: plug_adverage data error, value: ' + json.plug_adverage);
+					
 					}
 					
 					if(json.plug_peak && json.plug_peak>0){
 					 plug_peak.refresh(json.plug_peak);
 					}else{
 						error1 = true;
-					$("#error").text('Monitor average status: plug_peak data throwing an error, plug_peak value: ' + json.plug_peak);
-					$("#error").show();
+					$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor average status: plug_peak data error, value: ' + json.plug_peak);
+					
 					}
 					
 					if(json.tub_adverage && json.tub_adverage>0){
 					tub_adverage.refresh(json.tub_adverage);
 					}else{
 						error1 = true;
-					$("#error").text('Monitor average status: tub_adverage data throwing an error, tub_adverage value: ' + json.tub_adverage);
-					$("#error").show();
+					$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor average status: tub_adverage data error, value: ' + json.tub_adverage);
+					
 					}
 					
 					if(json.tub_peak && json.tub_peak>0){
 					tub_peak.refresh(json.tub_peak);
 					}else{
 					error1 = true;
-					$("#error").text('Monitor average status: tub_peak data throwing an error, tub_peak value: ' + json.tub_peak);
-					$("#error").show();
+					$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor average status: tub_peak data error, value: ' + json.tub_peak);
+					
 					}
 					}
 				}
@@ -264,8 +265,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				data: {value: 1},
 				type: 'post',
 				error: function(XMLHttpRequest, textStatus, errorThrown){
-					$("#error").text('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-					$("#error").show();
+					$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+					
 					//alert('Monitor status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 				},
 				success: function(data){
@@ -275,30 +276,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						json = jQuery.parseJSON(data);
 					  } catch (e) {
 							error1 = true;
-							$("#error").text('Monitor status: json error, data: ' + data);
-							$("#error").show();
+							$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor status: json error, data: ' + data);
+							
 					
 					  }
 					if(json){  
 					
 					if(!error1){
-					$("#error").hide();
+					//$("#error").hide();
+						$("#error").text('If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com');
 					}
 					
 					if(json.plug && json.plug>0){
 					plug.refresh(json.plug);
 					}else{
 					error2 = true;
-					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.plug);
-					$("#error").show();
+					$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor status: plug data error, value: ' + json.plug);
+					
 					}
 					
 					if(json.tub && json.tub>0){
 					tub.refresh(json.tub);
 					}else{
 					error2 = true;
-					$("#error").text('Monitor status: plug data throwing an error, plug value: ' + json.tub);
-					$("#error").show();
+					$("#error").text('Error - Pease take a picture of the screen and email rsens@nb221.com - Monitor status: plug data error, value: ' + json.tub);
+					
 					}
 				}
 				}
