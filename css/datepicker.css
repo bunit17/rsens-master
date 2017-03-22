@@ -5,6 +5,8 @@ table.jCalendar {
 	background: #aaa;
     border-collapse: separate;
     border-spacing: 2px;
+	table-layout:fixed;
+    width:100%;
 }
 table.jCalendar th {
 	background: #333;
@@ -65,7 +67,7 @@ div.dp-popup {
 	font-size: 10px;
 	font-family: arial, sans-serif;
 	padding: 2px;
-	width: 171px;
+	width: 250px;
 	line-height: 1.2em;
 }
 div#dp-popup {
