@@ -200,7 +200,6 @@ function drawLowestAverageLineChart() {
         tub.push(parseFloat(lowest.tub_adverage));
       });
 	results['plug'].forEach(function(lowest) {
-        labels.push(new Date(lowest.timestamp).formatDDMMYYYY());
 		plug.push(parseFloat(lowest.plug_adverage));
       });
 
@@ -236,9 +235,9 @@ function drawLowestAverageLineChart() {
 					}],
 					yAxes: [{
 						ticks: {
-							max: 130,
-							min: 30,
-							stepSize: 12
+							max: 72,
+							min: 36,
+							stepSize: 3
 						}
 					}]
 				},
