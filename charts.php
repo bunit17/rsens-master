@@ -9,10 +9,13 @@
 <body>
 <div id="wrapper" class="container-fluid">
 	<div class="chart">
-	  <canvas id="QuietAverage" width="100%" height="40%"></canvas>
+	  <canvas id="QuietAverage" width="100%" height="25%"></canvas>
   </div>
 	<div class="chart">
-	  <canvas id="LoudPeak" width="100%" height="40%"></canvas>
+	  <canvas id="LoudPeak" width="100%" height="25%"></canvas>
+  </div>
+  	<div class="chart">
+	  <canvas id="LowestAverage" width="100%" height="25%"></canvas>
   </div>
 	<div class="row">
 		<div class="col-md-3 col">
@@ -176,8 +179,79 @@ function draw0100PeakLineChart() {
 	});
   }
   
+function drawLowestAverageLineChart() {
+
+    // Add a helper to format timestamp data
+    Date.prototype.formatDDMMYYYY = function() {
+        return this.getDate() +
+        "/" +  (this.getMonth() + 1) +
+        "/" +  this.getFullYear();
+    }
+
+    var jsonData = $.ajax({
+      url: 'lowestDaily.php',
+      dataType: 'json',
+    }).done(function (results) {
+
+      // Split timestamp and data into separate arrays
+      var labels = [], tub=[], plug=[];
+      results['tub'].forEach(function(lowest) {
+        labels.push(new Date(lowest.timestamp).formatDDMMYYYY());
+        tub.push(parseFloat(lowest.tub_adverage));
+      });
+	results['plug'].forEach(function(lowest) {
+        labels.push(new Date(lowest.timestamp).formatDDMMYYYY());
+		plug.push(parseFloat(lowest.plug_adverage));
+      });
+
+      // Create the chart.js data structure using 'labels' and 'data'
+      tempData = {
+        labels : labels,
+        datasets : [{
+            data                  : tub,
+			label: "Tub Lowest Average",
+			borderColor: 'rgba(255,99,132,1)',
+			backgroundColor: 'rgba(255, 99, 132, 0.2)'
+        },
+		{
+            data                  : plug,
+			label: "Plug Lowest Average",
+			borderColor: 'rgba(54, 162, 235, 1)',
+			backgroundColor: 'rgba(54, 162, 235, 0.2)'
+        },
+		]
+      };
+
+      // Get the context of the canvas element we want to select
+      var ctx = document.getElementById("LowestAverage").getContext("2d");
+
+      // Instantiate a new chart
+	 	var LineChart = new Chart(ctx, {
+			type: 'line',
+			data: tempData,
+			options: {
+				scales: {
+					xAxes: [{
+						display: false
+					}],
+					yAxes: [{
+						ticks: {
+							max: 130,
+							min: 30,
+							stepSize: 12
+						}
+					}]
+				},
+				responsive:true,
+				maintainAspectRatio: false
+			}
+		}); 
+	});
+  }  
+  
 draw0530AverageLineChart();
 draw0100PeakLineChart();
+drawLowestAverageLineChart();
 </script>
 
 </body>
