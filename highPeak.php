@@ -6,7 +6,7 @@ $sql = "SELECT * FROM (SELECT MIN(timestamp) as timestamp, adverage_data.plug_pe
 $result = mysqli_query($link, $sql) or die("Error in Selecting " . mysqli_error($link));
 
 $tempData = array();
-while($row =mysqli_fetch_assoc($result))
+while($row = mysqli_fetch_assoc($result))
 {
 	$tempData[] = $row;
 }
