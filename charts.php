@@ -235,7 +235,7 @@ function drawLowestAverageLineChart() {
 					}],
 					yAxes: [{
 						ticks: {
-							max: 72,
+							max: 63,
 							min: 36,
 							stepSize: 3
 						}
