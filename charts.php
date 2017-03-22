@@ -9,13 +9,13 @@
 <body>
 <div id="wrapper" class="container-fluid">
 	<div class="chart">
-	  <canvas id="QuietAverage" width="100%" height="25%"></canvas>
+	  <canvas id="QuietAverage" width="100%" height="30%"></canvas>
   </div>
 	<div class="chart">
-	  <canvas id="LoudPeak" width="100%" height="25%"></canvas>
+	  <canvas id="LoudPeak" width="100%" height="30%"></canvas>
   </div>
   	<div class="chart">
-	  <canvas id="LowestAverage" width="100%" height="25%"></canvas>
+	  <canvas id="LowestAverage" width="100%" height="30%"></canvas>
   </div>
 	<div class="row">
 		<div class="col-md-3 col">
