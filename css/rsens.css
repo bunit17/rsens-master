@@ -29,6 +29,14 @@
 		
 	}
 	
+	.chart2{
+		background-color: #FFF;
+		max-height: 500px;
+		height: 40%;
+		margin: 10px;
+		
+	}
+	
 	.main_guage{
 		height: 52%;
 	}

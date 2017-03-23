@@ -8,14 +8,11 @@
 </head>
 <body>
 <div id="wrapper" class="container-fluid">
-	<div class="chart">
-	  <canvas id="QuietAverage" width="100%" height="27%"></canvas>
+	<div class="chart2">
+	  <canvas id="36HourAverage" width="100%" height="40%"></canvas>
   </div>
-	<div class="chart">
-	  <canvas id="LoudPeak" width="100%" height="27%"></canvas>
-  </div>
-  	<div class="chart">
-	  <canvas id="LowestAverage" width="100%" height="27%"></canvas>
+	<div class="chart2">
+	  <canvas id="36HourPeak" width="100%" height="40%"></canvas>
   </div>
 	<div class="row">
 		<div class="col-md-3 col">
@@ -25,10 +22,10 @@
 			<div class="info guage text-center"><span><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></span></div>
 		</div>
 		<div class="col-md-3 col">
-			<div class="info guage text-center"><span><a href="yesterdayChart.php" class="linkText link">View 36 Hour Charts</a></span></div>
+			<div class="info guage text-center"><span><a href="index.php" class="linkText link">View Live Guages</a></span></div>
 		</div>
 		<div class="col-md-3 col">
-			<div class="info guage text-center"><span><a href="index.php" class="linkText link">View Live Guages</a></span></div>
+			<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
 		</div>
 	</div>
 	<div class="row">
@@ -44,7 +41,7 @@
 
 var tempData
 
-function draw0530AverageLineChart() {
+function draw36HourAverageLineChart() {
 
     // Add a helper to format timestamp data
     Date.prototype.formatDDMMYYYY = function() {
@@ -54,7 +51,7 @@ function draw0530AverageLineChart() {
     }
 
     var jsonData = $.ajax({
-      url: 'lowAverage.php',
+      url: 'yesterday.php',
       dataType: 'json',
     }).done(function (results) {
 
@@ -72,13 +69,13 @@ function draw0530AverageLineChart() {
         labels : labels,
         datasets : [{
             data                  : tub,
-			label: "Tub 0530 Average",
+			label: "Tub 36 Hour Average",
 			borderColor: 'rgba(255,99,132,1)',
 			backgroundColor: 'rgba(255, 99, 132, 0.2)'
         },
 		{
             data                  : plug,
-			label: "Plug 0530 Average",
+			label: "Plug 36 Hour Average",
 			borderColor: 'rgba(54, 162, 235, 1)',
 			backgroundColor: 'rgba(54, 162, 235, 0.2)'
         },
@@ -86,7 +83,7 @@ function draw0530AverageLineChart() {
       };
 
       // Get the context of the canvas element we want to select
-      var ctx = document.getElementById("QuietAverage").getContext("2d");
+      var ctx = document.getElementById("36HourAverage").getContext("2d");
 
       // Instantiate a new chart
 	 	var LineChart = new Chart(ctx, {
@@ -99,9 +96,9 @@ function draw0530AverageLineChart() {
 					}],
 					yAxes: [{
 						ticks: {
-							max: 72,
+							max: 130,
 							min: 36,
-							stepSize: 3
+							stepSize: 12
 						}
 					}]
 				},
@@ -112,7 +109,7 @@ function draw0530AverageLineChart() {
 	});
   }
 
-function draw0100PeakLineChart() {
+function draw36HourPeakLineChart() {
 
     // Add a helper to format timestamp data
     Date.prototype.formatDDMMYYYY = function() {
@@ -122,7 +119,7 @@ function draw0100PeakLineChart() {
     }
 
     var jsonData = $.ajax({
-      url: 'highPeak.php',
+      url: 'yesterday.php',
       dataType: 'json',
     }).done(function (results) {
 
@@ -139,13 +136,13 @@ function draw0100PeakLineChart() {
         labels : labels,
         datasets : [{
             data                  : tub,
-			label: "Tub 0100 Peak",
+			label: "Tub 36 Hour Peak",
 			borderColor: 'rgba(255,99,132,1)',
 			backgroundColor: 'rgba(255, 99, 132, 0.2)'
         },
 		{
             data                  : plug,
-			label: "Plug 0100 Peak",
+			label: "Plug 36 Hour Peak",
 			borderColor: 'rgba(54, 162, 235, 1)',
 			backgroundColor: 'rgba(54, 162, 235, 0.2)'
         },
@@ -153,7 +150,7 @@ function draw0100PeakLineChart() {
       };
 
       // Get the context of the canvas element we want to select
-      var ctx = document.getElementById("LoudPeak").getContext("2d");
+      var ctx = document.getElementById("36HourPeak").getContext("2d");
 
       // Instantiate a new chart
 	 	var LineChart = new Chart(ctx, {
@@ -167,7 +164,7 @@ function draw0100PeakLineChart() {
 					yAxes: [{
 						ticks: {
 							max: 130,
-							min: 30,
+							min: 36,
 							stepSize: 12
 						}
 					}]
@@ -179,78 +176,8 @@ function draw0100PeakLineChart() {
 	});
   }
   
-function drawLowestAverageLineChart() {
-
-    // Add a helper to format timestamp data
-    Date.prototype.formatDDMMYYYY = function() {
-        return this.getDate() +
-        "/" +  (this.getMonth() + 1) +
-        "/" +  this.getFullYear();
-    }
-
-    var jsonData = $.ajax({
-      url: 'lowestDaily.php',
-      dataType: 'json',
-    }).done(function (results) {
-
-      // Split timestamp and data into separate arrays
-      var labels = [], tub=[], plug=[];
-      results['tub'].forEach(function(lowest) {
-        labels.push(new Date(lowest.timestamp).formatDDMMYYYY());
-        tub.push(parseFloat(lowest.tub_adverage));
-      });
-	results['plug'].forEach(function(lowest) {
-		plug.push(parseFloat(lowest.plug_adverage));
-      });
-
-      // Create the chart.js data structure using 'labels' and 'data'
-      tempData = {
-        labels : labels,
-        datasets : [{
-            data                  : tub,
-			label: "Tub Lowest Average",
-			borderColor: 'rgba(255,99,132,1)',
-			backgroundColor: 'rgba(255, 99, 132, 0.2)'
-        },
-		{
-            data                  : plug,
-			label: "Plug Lowest Average",
-			borderColor: 'rgba(54, 162, 235, 1)',
-			backgroundColor: 'rgba(54, 162, 235, 0.2)'
-        },
-		]
-      };
-
-      // Get the context of the canvas element we want to select
-      var ctx = document.getElementById("LowestAverage").getContext("2d");
-
-      // Instantiate a new chart
-	 	var LineChart = new Chart(ctx, {
-			type: 'line',
-			data: tempData,
-			options: {
-				scales: {
-					xAxes: [{
-						display: false
-					}],
-					yAxes: [{
-						ticks: {
-							max: 63,
-							min: 36,
-							stepSize: 3
-						}
-					}]
-				},
-				responsive:true,
-				maintainAspectRatio: false
-			}
-		}); 
-	});
-  }  
-  
-draw0530AverageLineChart();
-draw0100PeakLineChart();
-drawLowestAverageLineChart();
+draw36HourAverageLineChart();
+draw36HourPeakLineChart();
 </script>
 
 </body>
