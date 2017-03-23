@@ -58,7 +58,7 @@ function draw36HourAverageLineChart() {
       // Split timestamp and data into separate arrays
       var labels = [], tub=[], plug=[];
       results.forEach(function(average) {
-        labels.push(new Date(average.timestamp).formatDDMMYYYY());
+        labels.push(new Date(average.timestamp);//.formatDDMMYYYY());
 
         tub.push(parseFloat(average.tub_adverage));
 		plug.push(parseFloat(average.plug_adverage));
@@ -126,7 +126,7 @@ function draw36HourPeakLineChart() {
       // Split timestamp and data into separate arrays
       var labels = [], tub=[], plug=[];
       results.forEach(function(peak) {
-        labels.push(new Date(peak.timestamp).formatDDMMYYYY());
+        labels.push(new Date(peak.timestamp);//.formatDDMMYYYY());
         tub.push(parseFloat(peak.tub_peak));
 		plug.push(parseFloat(peak.plug_peak));
       });
