@@ -1,7 +1,7 @@
 <?php
 require("database_conc.inc");
 
-$sql = "SELECT * FROM (SELECT timestamp, adverage_data.plug_adverage, adverage_data.tub_adverage,adverage_data.plug_peak, adverage_data.tub_peak FROM adverage_data WHERE timestamp >= now() - INTERVAL 1 DAY ORDER BY id DESC LIMIT 300) sub ORDER BY timestamp ASC";
+$sql = "SELECT * FROM (SELECT timestamp, adverage_data.plug_adverage, adverage_data.tub_adverage,adverage_data.plug_peak, adverage_data.tub_peak FROM adverage_data WHERE timestamp >= now() - INTERVAL 36 HOUR ORDER BY id DESC LIMIT 300) sub ORDER BY timestamp ASC";
 
 $result = mysqli_query($link, $sql) or die("Error in Selecting " . mysqli_error($link));
 
