@@ -22,10 +22,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-xs-12 col">
+					<div class="col-md-6 col-xs-12 col col1">
 						<div id="plug_adverage" class="guage sub_guage"></div>
 					</div>
-					<div class="col-md-6 col-xs-12 col">
+					<div class="col-md-6 col-xs-12 col col1">
 						<div id="plug_peak" class="guage sub_guage"></div>
 					</div>
 				</div>
@@ -42,26 +42,26 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-xs-12 col">
+					<div class="col-md-6 col-xs-12 col col1">
 						<div id="tub_adverage" class="guage sub_guage"></div>
 					</div>
-					<div class="col-md-6 col-xs-12 col">
+					<div class="col-md-6 col-xs-12 col col1">
 						<div id="tub_peak" class="guage sub_guage"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3 col">
+			<div class="col-md-3 col col1">
 				<div class="info guage text-center"><span><a href="history.php" class="linkText today link">View todays data</a></span></div>
 			</div>
-			<div class="col-md-3 col">
+			<div class="col-md-3 col col1">
 				<div class="info guage text-center"><span><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></span></div>
 			</div>
-			<div class="col-md-3 col">
+			<div class="col-md-3 col col1">
 				<div class="info guage text-center"><span><a href="yesterdayChart.php" class="linkText link">View 36 Hour Charts</a></span></div>
 			</div>
-			<div class="col-md-3 col">
+			<div class="col-md-3 col col1">
 				<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
 			</div>
 		</div>
