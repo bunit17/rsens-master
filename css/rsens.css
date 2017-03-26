@@ -17,7 +17,8 @@
 	}
 
 	.guage{
-		background-color: #007FDF;	
+		background-color: #007FDF;
+		margin: 5px;
 	}
 	
 		
@@ -57,6 +58,7 @@
 	.col{
 		padding-right:5px;
 		padding-left:5px;
+		border: 5px solid red;
 	}
 
 	.row{
