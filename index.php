@@ -22,10 +22,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-xs-12 col col1">
+					<div class="col-md-6 col-xs-12 col colL">
 						<div id="plug_adverage" class="guage sub_guage"></div>
 					</div>
-					<div class="col-md-6 col-xs-12 col col1">
+					<div class="col-md-6 col-xs-12 col colR">
 						<div id="plug_peak" class="guage sub_guage"></div>
 					</div>
 				</div>
@@ -42,10 +42,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-xs-12 col col1">
+					<div class="col-md-6 col-xs-12 col colL">
 						<div id="tub_adverage" class="guage sub_guage"></div>
 					</div>
-					<div class="col-md-6 col-xs-12 col col1">
+					<div class="col-md-6 col-xs-12 col colR">
 						<div id="tub_peak" class="guage sub_guage"></div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 col">
+			<div class="col-md-12 col col1">
 				<div class="info guage">
 					<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
 				</div>
