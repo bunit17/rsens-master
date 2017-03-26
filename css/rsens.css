@@ -38,7 +38,7 @@
 	}
 	
 	.main_guage{
-		height: 50%;
+		height: 51%;
 	}
 	.sub_guage{
 		height: 26%;
@@ -100,5 +100,8 @@
 		vertical-align: middle;
 		line-height: normal;
 		white-space:pre;
+	}
+	.wrapper {
+		box-sizing: border-box;
 	}
 	

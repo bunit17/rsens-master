@@ -7,69 +7,67 @@
 <link href="css/rsens.css" rel="stylesheet">
 </head>
 <body>
-<div id="wrapper" class="container-fluid">
-	<div>
-		<div class="row">
-			<div class="col-md-6 col-xs-12 col">
-				<div class="row">
-					<div class="col-md-12 col-xs-12 col">
-						<div class="info guage text-center"><span class="infoText">Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 col">
-						<div id="plug" class="guage main_guage"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-xs-12 col colL">
-						<div id="plug_adverage" class="guage sub_guage"></div>
-					</div>
-					<div class="col-md-6 col-xs-12 col colR">
-						<div id="plug_peak" class="guage sub_guage"></div>
-					</div>
+<div id="wrapper" class="container-fluid wrapper">
+	<div class="row">
+		<div class="col-md-6 col-xs-12 col">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col">
+					<div class="info guage text-center"><span class="infoText">Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 				</div>
 			</div>
-			<div class="col-md-6 col-xs-12 col">
-				<div class="row">
-					<div class="col-md-12 col-xs-12 col">
-						<div class="info guage text-center"><span class="infoText">Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
-					</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col">
+					<div id="plug" class="guage main_guage"></div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 col">
-						<div id="tub" class="guage main_guage"></div>
-					</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-xs-12 col colL">
+					<div id="plug_adverage" class="guage sub_guage"></div>
 				</div>
-				<div class="row">
-					<div class="col-md-6 col-xs-12 col colL">
-						<div id="tub_adverage" class="guage sub_guage"></div>
-					</div>
-					<div class="col-md-6 col-xs-12 col colR">
-						<div id="tub_peak" class="guage sub_guage"></div>
-					</div>
+				<div class="col-md-6 col-xs-12 col colR">
+					<div id="plug_peak" class="guage sub_guage"></div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3 col col1">
-				<div class="info guage text-center"><span><a href="history.php" class="linkText today link">View todays data</a></span></div>
+		<div class="col-md-6 col-xs-12 col">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col">
+					<div class="info guage text-center"><span class="infoText">Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+				</div>
 			</div>
-			<div class="col-md-3 col col1">
-				<div class="info guage text-center"><span><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></span></div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col">
+					<div id="tub" class="guage main_guage"></div>
+				</div>
 			</div>
-			<div class="col-md-3 col col1">
-				<div class="info guage text-center"><span><a href="yesterdayChart.php" class="linkText link">View 36 Hour Charts</a></span></div>
-			</div>
-			<div class="col-md-3 col col1">
-				<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
+			<div class="row">
+				<div class="col-md-6 col-xs-12 col colL">
+					<div id="tub_adverage" class="guage sub_guage"></div>
+				</div>
+				<div class="col-md-6 col-xs-12 col colR">
+					<div id="tub_peak" class="guage sub_guage"></div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12 col col1">
-				<div class="info guage">
-					<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
-				</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col col1">
+			<div class="info guage text-center"><span><a href="history.php" class="linkText today link">View todays data</a></span></div>
+		</div>
+		<div class="col-md-3 col col1">
+			<div class="info guage text-center"><span><a href="history.php?date=<?php echo date('d-m-Y', time() - 60 * 60 * 24); ?>" class="linkText yesterday link">View yesterdays data</a></span></div>
+		</div>
+		<div class="col-md-3 col col1">
+			<div class="info guage text-center"><span><a href="yesterdayChart.php" class="linkText link">View 36 Hour Charts</a></span></div>
+		</div>
+		<div class="col-md-3 col col1">
+			<div class="info guage text-center"><span><a href="charts.php" class="linkText link">View Trend Charts</a></span></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col col1">
+			<div class="info guage">
+				<span><p class="infoText">If there is an error or problem with this serivce please take a picture of the screen and email rsens@nb221.com</p></span>
 			</div>
 		</div>
 	</div>
