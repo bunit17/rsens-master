@@ -12,10 +12,14 @@
 		<div class="row">
 			<div class="col-md-6 col-xs-12 col">
 				<div class="row">
-					<div class="info guage text-center"><span class="infoText">Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+					<div class="col-md-12 col-xs-12 col">
+						<div class="info guage text-center"><span class="infoText">Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+					</div>
 				</div>
 				<div class="row">
-					<div id="plug" class="guage main_guage"></div>
+					<div class="col-md-12 col-xs-12 col">
+						<div id="plug" class="guage main_guage"></div>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 col-xs-12 col">
@@ -28,10 +32,14 @@
 			</div>
 			<div class="col-md-6 col-xs-12 col">
 				<div class="row">
-					<div class="info guage text-center"><span class="infoText">Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+					<div class="col-md-12 col-xs-12 col">
+						<div class="info guage text-center"><span class="infoText">Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
+					</div>
 				</div>
 				<div class="row">
-					<div id="tub" class="guage main_guage"></div>
+					<div class="col-md-12 col-xs-12 col">
+						<div id="tub" class="guage main_guage"></div>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 col-xs-12 col">
