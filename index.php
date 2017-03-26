@@ -10,7 +10,7 @@
 <div id="wrapper" class="container-fluid">
 	<div>
 		<div class="row">
-			<div class="col-md-6 col-xs-6 col">
+			<div class="col-md-6 col-xs-12 col">
 				<div class="row">
 					<div class="info guage text-center"><span class="infoText">Plug Sensor  </span><span id="plugStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 				</div>
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 col-xs-6 col">
+			<div class="col-md-6 col-xs-12 col">
 				<div class="row">
 					<div class="info guage text-center"><span class="infoText">Tub Sensor  </span><span id="tubStatus" class="glyphicon glyphicon-record" aria-hidden="true"></span></div>
 				</div>
